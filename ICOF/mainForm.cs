@@ -16,5 +16,20 @@ namespace ICOF
         {
             InitializeComponent();
         }
+
+        private void exit(object sender, EventArgs e)
+        {
+            DialogResult exit = MessageBox.Show("Voulez vous sortir?", "Sortir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (exit != DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
+        private void personneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addPersonForm ajouter = new addPersonForm();
+            ajouter.Show();
+        }
     }
 }

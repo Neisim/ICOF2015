@@ -39,7 +39,7 @@
             this.donéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGrid_All = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,8 +65,14 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherRemarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rechercheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_All)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +80,9 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.annuaireToolStripMenuItem,
-            this.donéesToolStripMenuItem});
+            this.donéesToolStripMenuItem,
+            this.remarquesToolStripMenuItem,
+            this.rechercheToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(550, 24);
@@ -98,38 +106,39 @@
             // pourTousToolStripMenuItem
             // 
             this.pourTousToolStripMenuItem.Name = "pourTousToolStripMenuItem";
-            this.pourTousToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pourTousToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.pourTousToolStripMenuItem.Text = "Tous";
             // 
             // uFAToolStripMenuItem
             // 
             this.uFAToolStripMenuItem.Name = "uFAToolStripMenuItem";
-            this.uFAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uFAToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.uFAToolStripMenuItem.Text = "UFA";
             // 
             // directionToolStripMenuItem
             // 
             this.directionToolStripMenuItem.Name = "directionToolStripMenuItem";
-            this.directionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.directionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.directionToolStripMenuItem.Text = "Direction";
             // 
             // secrétariatToolStripMenuItem
             // 
             this.secrétariatToolStripMenuItem.Name = "secrétariatToolStripMenuItem";
-            this.secrétariatToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.secrétariatToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.secrétariatToolStripMenuItem.Text = "Secrétariat";
             // 
             // comptabilitéToolStripMenuItem
             // 
             this.comptabilitéToolStripMenuItem.Name = "comptabilitéToolStripMenuItem";
-            this.comptabilitéToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.comptabilitéToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.comptabilitéToolStripMenuItem.Text = "Comptabilité";
             // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
+            this.sortirToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
             // donéesToolStripMenuItem
             // 
@@ -142,6 +151,9 @@
             // 
             // ajouterToolStripMenuItem
             // 
+            this.ajouterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personneToolStripMenuItem,
+            this.entrepriseToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
@@ -149,15 +161,15 @@
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             // 
-            // dataGridView
+            // dataGrid_All
             // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGrid_All.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGrid_All.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGrid_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGrid_All.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -183,20 +195,20 @@
             this.Column23,
             this.Column24,
             this.Column25});
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 24);
-            this.dataGridView.MultiSelect = false;
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView.Size = new System.Drawing.Size(550, 271);
-            this.dataGridView.TabIndex = 1;
+            this.dataGrid_All.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid_All.Location = new System.Drawing.Point(0, 24);
+            this.dataGrid_All.MultiSelect = false;
+            this.dataGrid_All.Name = "dataGrid_All";
+            this.dataGrid_All.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGrid_All.Size = new System.Drawing.Size(550, 271);
+            this.dataGrid_All.TabIndex = 1;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Nom de l\'entreprise";
             this.Column1.Name = "Column1";
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 112;
+            this.Column1.Width = 122;
             // 
             // Column2
             // 
@@ -210,7 +222,7 @@
             this.Column3.HeaderText = "Adresse 2";
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 73;
+            this.Column3.Width = 79;
             // 
             // Column4
             // 
@@ -259,7 +271,7 @@
             this.Column10.HeaderText = "Site Web";
             this.Column10.Name = "Column10";
             this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column10.Width = 70;
+            this.Column10.Width = 76;
             // 
             // Column11
             // 
@@ -273,7 +285,7 @@
             this.Column12.HeaderText = "Type établissement";
             this.Column12.Name = "Column12";
             this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column12.Width = 113;
+            this.Column12.Width = 123;
             // 
             // Column13
             // 
@@ -315,14 +327,14 @@
             this.Column18.HeaderText = "Mail perso";
             this.Column18.Name = "Column18";
             this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column18.Width = 74;
+            this.Column18.Width = 80;
             // 
             // Column19
             // 
             this.Column19.HeaderText = "Ligne directe";
             this.Column19.Name = "Column19";
             this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column19.Width = 86;
+            this.Column19.Width = 93;
             // 
             // Column20
             // 
@@ -336,14 +348,14 @@
             this.Column21.HeaderText = "Stagiaire ICOF (Oui/Non)";
             this.Column21.Name = "Column21";
             this.Column21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column21.Width = 137;
+            this.Column21.Width = 150;
             // 
             // Column22
             // 
             this.Column22.HeaderText = "Année du stage";
             this.Column22.Name = "Column22";
             this.Column22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column22.Width = 75;
+            this.Column22.Width = 107;
             // 
             // Column23
             // 
@@ -357,28 +369,69 @@
             this.Column24.HeaderText = "Sortie en";
             this.Column24.Name = "Column24";
             this.Column24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column24.Width = 69;
+            this.Column24.Width = 74;
             // 
             // Column25
             // 
             this.Column25.HeaderText = "Versement TA";
             this.Column25.Name = "Column25";
             this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column25.Width = 91;
+            this.Column25.Width = 99;
+            // 
+            // remarquesToolStripMenuItem
+            // 
+            this.remarquesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherRemarquesToolStripMenuItem});
+            this.remarquesToolStripMenuItem.Name = "remarquesToolStripMenuItem";
+            this.remarquesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.remarquesToolStripMenuItem.Text = "Remarques";
+            // 
+            // afficherRemarquesToolStripMenuItem
+            // 
+            this.afficherRemarquesToolStripMenuItem.Name = "afficherRemarquesToolStripMenuItem";
+            this.afficherRemarquesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.afficherRemarquesToolStripMenuItem.Text = "Afficher remarques";
+            // 
+            // rechercheToolStripMenuItem
+            // 
+            this.rechercheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chercherToolStripMenuItem});
+            this.rechercheToolStripMenuItem.Name = "rechercheToolStripMenuItem";
+            this.rechercheToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.rechercheToolStripMenuItem.Text = "Recherche";
+            // 
+            // chercherToolStripMenuItem
+            // 
+            this.chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
+            this.chercherToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chercherToolStripMenuItem.Text = "Chercher...";
+            // 
+            // personneToolStripMenuItem
+            // 
+            this.personneToolStripMenuItem.Name = "personneToolStripMenuItem";
+            this.personneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.personneToolStripMenuItem.Text = "Personne";
+            this.personneToolStripMenuItem.Click += new System.EventHandler(this.personneToolStripMenuItem_Click);
+            // 
+            // entrepriseToolStripMenuItem
+            // 
+            this.entrepriseToolStripMenuItem.Name = "entrepriseToolStripMenuItem";
+            this.entrepriseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.entrepriseToolStripMenuItem.Text = "Entreprise";
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 295);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.dataGrid_All);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainForm";
             this.Text = "Annuaire ICOF";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_All)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +450,7 @@
         private System.Windows.Forms.ToolStripMenuItem donéesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dataGrid_All;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -423,6 +476,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        private System.Windows.Forms.ToolStripMenuItem remarquesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem afficherRemarquesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rechercheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chercherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entrepriseToolStripMenuItem;
     }
 }
 
