@@ -15,21 +15,45 @@ namespace ICOF
         public mainForm()
         {
             InitializeComponent();
+            Connect c = new Connect();
         }
 
         private void exit(object sender, EventArgs e)
         {
-            DialogResult exit = MessageBox.Show("Voulez vous sortir?", "Sortir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (exit != DialogResult.No)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void personneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            addPersonForm ajouter = new addPersonForm();
-            ajouter.Show();
+            addPersonForm ajouterPersonnel = new addPersonForm();
+            ajouterPersonnel.ShowDialog();
+        }
+
+        private void entrepriseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addCompanyForm ajouterEntreprise = new addCompanyForm();
+            ajouterEntreprise.ShowDialog();
+        }
+
+        private void afficherRemarquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addContactForm ajouterRemarque = new addContactForm();
+            ajouterRemarque.ShowDialog();
+        }
+
+        private void close_form(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult exit = MessageBox.Show(this, "Voulez vous sortir?", "Sortir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (exit == DialogResult.No) e.Cancel = true;
+            }
+        }
+
+        private void access_form(object sender, EventArgs e)
+        {
+            accessForm acces = new accessForm();
+            acces.ShowDialog();
         }
     }
 }

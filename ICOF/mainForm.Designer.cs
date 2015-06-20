@@ -31,14 +31,20 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.annuaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pourTousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.uFAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.directionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.secrétariatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comptabilitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ufaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.directionMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.officeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.remarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherRemarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rechercheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGrid_All = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,12 +71,6 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.afficherRemarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rechercheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_All)).BeginInit();
             this.SuspendLayout();
@@ -93,10 +93,10 @@
             // 
             this.annuaireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pourTousToolStripMenuItem,
-            this.uFAToolStripMenuItem,
-            this.directionToolStripMenuItem,
-            this.secrétariatToolStripMenuItem,
-            this.comptabilitéToolStripMenuItem,
+            this.ufaMenuItem,
+            this.directionMenuItem,
+            this.officeMenuItem,
+            this.accountingMenuItem,
             this.sortirToolStripMenuItem});
             this.annuaireToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.annuaireToolStripMenuItem.Name = "annuaireToolStripMenuItem";
@@ -106,37 +106,41 @@
             // pourTousToolStripMenuItem
             // 
             this.pourTousToolStripMenuItem.Name = "pourTousToolStripMenuItem";
-            this.pourTousToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.pourTousToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pourTousToolStripMenuItem.Text = "Tous";
             // 
-            // uFAToolStripMenuItem
+            // ufaMenuItem
             // 
-            this.uFAToolStripMenuItem.Name = "uFAToolStripMenuItem";
-            this.uFAToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.uFAToolStripMenuItem.Text = "UFA";
+            this.ufaMenuItem.Name = "ufaMenuItem";
+            this.ufaMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ufaMenuItem.Text = "UFA";
+            this.ufaMenuItem.Click += new System.EventHandler(this.access_form);
             // 
-            // directionToolStripMenuItem
+            // directionMenuItem
             // 
-            this.directionToolStripMenuItem.Name = "directionToolStripMenuItem";
-            this.directionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.directionToolStripMenuItem.Text = "Direction";
+            this.directionMenuItem.Name = "directionMenuItem";
+            this.directionMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.directionMenuItem.Text = "Direction";
+            this.directionMenuItem.Click += new System.EventHandler(this.access_form);
             // 
-            // secrétariatToolStripMenuItem
+            // officeMenuItem
             // 
-            this.secrétariatToolStripMenuItem.Name = "secrétariatToolStripMenuItem";
-            this.secrétariatToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.secrétariatToolStripMenuItem.Text = "Secrétariat";
+            this.officeMenuItem.Name = "officeMenuItem";
+            this.officeMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.officeMenuItem.Text = "Secrétariat";
+            this.officeMenuItem.Click += new System.EventHandler(this.access_form);
             // 
-            // comptabilitéToolStripMenuItem
+            // accountingMenuItem
             // 
-            this.comptabilitéToolStripMenuItem.Name = "comptabilitéToolStripMenuItem";
-            this.comptabilitéToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.comptabilitéToolStripMenuItem.Text = "Comptabilité";
+            this.accountingMenuItem.Name = "accountingMenuItem";
+            this.accountingMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.accountingMenuItem.Text = "Comptabilité";
+            this.accountingMenuItem.Click += new System.EventHandler(this.access_form);
             // 
             // sortirToolStripMenuItem
             // 
             this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sortirToolStripMenuItem.Text = "Sortir";
             this.sortirToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
@@ -155,14 +159,57 @@
             this.personneToolStripMenuItem,
             this.entrepriseToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
+            // 
+            // personneToolStripMenuItem
+            // 
+            this.personneToolStripMenuItem.Name = "personneToolStripMenuItem";
+            this.personneToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.personneToolStripMenuItem.Text = "Personne";
+            this.personneToolStripMenuItem.Click += new System.EventHandler(this.personneToolStripMenuItem_Click);
+            // 
+            // entrepriseToolStripMenuItem
+            // 
+            this.entrepriseToolStripMenuItem.Name = "entrepriseToolStripMenuItem";
+            this.entrepriseToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.entrepriseToolStripMenuItem.Text = "Entreprise";
+            this.entrepriseToolStripMenuItem.Click += new System.EventHandler(this.entrepriseToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
+            // 
+            // remarquesToolStripMenuItem
+            // 
+            this.remarquesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afficherRemarquesToolStripMenuItem});
+            this.remarquesToolStripMenuItem.Name = "remarquesToolStripMenuItem";
+            this.remarquesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.remarquesToolStripMenuItem.Text = "Remarques";
+            // 
+            // afficherRemarquesToolStripMenuItem
+            // 
+            this.afficherRemarquesToolStripMenuItem.Name = "afficherRemarquesToolStripMenuItem";
+            this.afficherRemarquesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.afficherRemarquesToolStripMenuItem.Text = "Ajouter remarque";
+            this.afficherRemarquesToolStripMenuItem.Click += new System.EventHandler(this.afficherRemarquesToolStripMenuItem_Click);
+            // 
+            // rechercheToolStripMenuItem
+            // 
+            this.rechercheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chercherToolStripMenuItem});
+            this.rechercheToolStripMenuItem.Name = "rechercheToolStripMenuItem";
+            this.rechercheToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.rechercheToolStripMenuItem.Text = "Recherche";
+            // 
+            // chercherToolStripMenuItem
+            // 
+            this.chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
+            this.chercherToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.chercherToolStripMenuItem.Text = "Chercher...";
             // 
             // dataGrid_All
             // 
@@ -378,47 +425,6 @@
             this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column25.Width = 99;
             // 
-            // remarquesToolStripMenuItem
-            // 
-            this.remarquesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.afficherRemarquesToolStripMenuItem});
-            this.remarquesToolStripMenuItem.Name = "remarquesToolStripMenuItem";
-            this.remarquesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.remarquesToolStripMenuItem.Text = "Remarques";
-            // 
-            // afficherRemarquesToolStripMenuItem
-            // 
-            this.afficherRemarquesToolStripMenuItem.Name = "afficherRemarquesToolStripMenuItem";
-            this.afficherRemarquesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.afficherRemarquesToolStripMenuItem.Text = "Afficher remarques";
-            // 
-            // rechercheToolStripMenuItem
-            // 
-            this.rechercheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chercherToolStripMenuItem});
-            this.rechercheToolStripMenuItem.Name = "rechercheToolStripMenuItem";
-            this.rechercheToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.rechercheToolStripMenuItem.Text = "Recherche";
-            // 
-            // chercherToolStripMenuItem
-            // 
-            this.chercherToolStripMenuItem.Name = "chercherToolStripMenuItem";
-            this.chercherToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.chercherToolStripMenuItem.Text = "Chercher...";
-            // 
-            // personneToolStripMenuItem
-            // 
-            this.personneToolStripMenuItem.Name = "personneToolStripMenuItem";
-            this.personneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.personneToolStripMenuItem.Text = "Personne";
-            this.personneToolStripMenuItem.Click += new System.EventHandler(this.personneToolStripMenuItem_Click);
-            // 
-            // entrepriseToolStripMenuItem
-            // 
-            this.entrepriseToolStripMenuItem.Name = "entrepriseToolStripMenuItem";
-            this.entrepriseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.entrepriseToolStripMenuItem.Text = "Entreprise";
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +435,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainForm";
             this.Text = "Annuaire ICOF";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.close_form);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_All)).EndInit();
@@ -442,10 +449,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem annuaireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pourTousToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem uFAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem directionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem secrétariatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comptabilitéToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ufaMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem directionMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem officeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accountingMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donéesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
