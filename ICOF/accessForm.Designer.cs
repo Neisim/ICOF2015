@@ -81,7 +81,6 @@
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.Size = new System.Drawing.Size(260, 20);
             this.passwordTB.TabIndex = 4;
-            this.passwordTB.UseSystemPasswordChar = true;
             this.passwordTB.Leave += new System.EventHandler(this.outControl);
             // 
             // clear
@@ -101,8 +100,9 @@
             this.enter.Name = "enter";
             this.enter.Size = new System.Drawing.Size(415, 43);
             this.enter.TabIndex = 18;
-            this.enter.Text = "Valider";
+            this.enter.Text = "Se connecter";
             this.enter.UseVisualStyleBackColor = true;
+            this.enter.Click += new System.EventHandler(this.validateUser);
             // 
             // accessForm
             // 

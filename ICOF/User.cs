@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace ICOF
 {
-    class User
+    public class User
     {
-        string profile;
-        Boolean connected;
+        private String user_name;
+        private String user_hash;
 
-        User()
+        public User(String name, String hash)
         {
-            profile = "Invité";
-            connected = false;
+            user_name = name;
+            user_hash = hash;
         }
+
+        public String getName() { return user_name; }
+        public String getHash() { return user_hash; }
     }
 }

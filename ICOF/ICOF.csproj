@@ -69,8 +69,9 @@
     <Compile Include="addPersonForm.Designer.cs">
       <DependentUpon>addPersonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connect.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="ControlChecker.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>

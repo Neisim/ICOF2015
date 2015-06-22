@@ -15,7 +15,7 @@ namespace ICOF
         public mainForm()
         {
             InitializeComponent();
-            Connect c = new Connect();
+            this.Text += " - Invité"; 
         }
 
         private void exit(object sender, EventArgs e)
@@ -54,6 +54,23 @@ namespace ICOF
         {
             accessForm acces = new accessForm();
             acces.ShowDialog();
+            String userProfile = acces.getProfile();
+            this.Text = "Annuaire ICOF - " + userProfile;
+
+            if (!userProfile.Equals("Guest")) profile.Visible = true;
+            else profile.Visible = false;
+
+            if (userProfile.Equals("Office"))
+            {
+                contact.Visible = true;
+                data.Visible = true;
+            }
+
+            else
+            {
+                contact.Visible = false;
+                data.Visible = false;
+            }
         }
     }
 }

@@ -36,12 +36,12 @@
             this.officeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.donéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.data = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entrepriseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.remarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contact = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherRemarquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rechercheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +71,8 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profile = new System.Windows.Forms.ToolStripMenuItem();
+            this.changerMotDePasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_All)).BeginInit();
             this.SuspendLayout();
@@ -80,9 +82,10 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.annuaireToolStripMenuItem,
-            this.donéesToolStripMenuItem,
-            this.remarquesToolStripMenuItem,
-            this.rechercheToolStripMenuItem});
+            this.data,
+            this.contact,
+            this.rechercheToolStripMenuItem,
+            this.profile});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(550, 24);
@@ -144,14 +147,15 @@
             this.sortirToolStripMenuItem.Text = "Sortir";
             this.sortirToolStripMenuItem.Click += new System.EventHandler(this.exit);
             // 
-            // donéesToolStripMenuItem
+            // data
             // 
-            this.donéesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.data.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem,
             this.modifierToolStripMenuItem});
-            this.donéesToolStripMenuItem.Name = "donéesToolStripMenuItem";
-            this.donéesToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.donéesToolStripMenuItem.Text = "Donées";
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(55, 20);
+            this.data.Text = "Donées";
+            this.data.Visible = false;
             // 
             // ajouterToolStripMenuItem
             // 
@@ -159,7 +163,7 @@
             this.personneToolStripMenuItem,
             this.entrepriseToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // personneToolStripMenuItem
@@ -179,16 +183,17 @@
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             // 
-            // remarquesToolStripMenuItem
+            // contact
             // 
-            this.remarquesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contact.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.afficherRemarquesToolStripMenuItem});
-            this.remarquesToolStripMenuItem.Name = "remarquesToolStripMenuItem";
-            this.remarquesToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.remarquesToolStripMenuItem.Text = "Remarques";
+            this.contact.Name = "contact";
+            this.contact.Size = new System.Drawing.Size(73, 20);
+            this.contact.Text = "Remarques";
+            this.contact.Visible = false;
             // 
             // afficherRemarquesToolStripMenuItem
             // 
@@ -425,6 +430,21 @@
             this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column25.Width = 99;
             // 
+            // profile
+            // 
+            this.profile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changerMotDePasseToolStripMenuItem});
+            this.profile.Name = "profile";
+            this.profile.Size = new System.Drawing.Size(43, 20);
+            this.profile.Text = "Profil";
+            this.profile.Visible = false;
+            // 
+            // changerMotDePasseToolStripMenuItem
+            // 
+            this.changerMotDePasseToolStripMenuItem.Name = "changerMotDePasseToolStripMenuItem";
+            this.changerMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.changerMotDePasseToolStripMenuItem.Text = "Changer mot de passe";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,7 +474,7 @@
         private System.Windows.Forms.ToolStripMenuItem officeMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountingMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem donéesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem data;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGrid_All;
@@ -483,12 +503,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
-        private System.Windows.Forms.ToolStripMenuItem remarquesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contact;
         private System.Windows.Forms.ToolStripMenuItem afficherRemarquesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rechercheToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chercherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entrepriseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profile;
+        private System.Windows.Forms.ToolStripMenuItem changerMotDePasseToolStripMenuItem;
     }
 }
 
