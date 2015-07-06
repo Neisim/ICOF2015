@@ -30,8 +30,9 @@ namespace ICOF
         
         //SELECT
         public String userProfile(User u)                           { return select.selectUserProfile(u); }
-        public DataTable getContacts(String companyName)            { return select.selectContactCompany(companyName); }
-        public DataTable getTrainingStudents(String companyName)    { return select.selectTrainigStudent(companyName); }
+        public DataTable getContacts(Company company)               { return select.selectContactCompany(company); }
+        public DataTable getTrainingStudents(Company company)       { return select.selectTrainigStudent(company); }
+        public DataTable getPostIt(Company company)                 { return select.selectPostIt(company); }
         public DataTable getCompanies()                             { return select.selectCompanies(); }
         public DataTable getPersons()                               { return select.selectPersons(); } 
         public ArrayList getCourses()                               { return select.selectCourses(); }

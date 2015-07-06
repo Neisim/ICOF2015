@@ -57,14 +57,17 @@
             this.clear = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.contactsResult = new System.Windows.Forms.Label();
+            this.addContact = new System.Windows.Forms.Button();
             this.contactDGV = new System.Windows.Forms.DataGridView();
             this.contact_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contact_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direct_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.post = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addContact = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.studentsResult = new System.Windows.Forms.Label();
+            this.addStudentTraining = new System.Windows.Forms.Button();
             this.studentsTrainingDGV = new System.Windows.Forms.DataGridView();
             this.student_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.student_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,27 +75,24 @@
             this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacher_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacher_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.postItResult = new System.Windows.Forms.Label();
+            this.addPostIt = new System.Windows.Forms.Button();
+            this.postItDGV = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactsResult = new System.Windows.Forms.Label();
-            this.studentsResult = new System.Windows.Forms.Label();
-            this.postItResult = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postItDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -367,18 +367,29 @@
             this.tabPage1.Text = "Contacts";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // contactsResult
             // 
-            this.tabPage2.Controls.Add(this.studentsResult);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.studentsTrainingDGV);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(966, 199);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Élèves en satge";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.contactsResult.AutoSize = true;
+            this.contactsResult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.contactsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactsResult.Location = new System.Drawing.Point(322, 68);
+            this.contactsResult.Name = "contactsResult";
+            this.contactsResult.Size = new System.Drawing.Size(327, 31);
+            this.contactsResult.TabIndex = 78;
+            this.contactsResult.Text = "Pas de contacts à afficher";
+            this.contactsResult.Visible = false;
+            // 
+            // addContact
+            // 
+            this.addContact.BackColor = System.Drawing.SystemColors.Control;
+            this.addContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addContact.Location = new System.Drawing.Point(0, 162);
+            this.addContact.Name = "addContact";
+            this.addContact.Size = new System.Drawing.Size(966, 37);
+            this.addContact.TabIndex = 77;
+            this.addContact.Text = "Ajouter contact";
+            this.addContact.UseVisualStyleBackColor = false;
+            this.addContact.Click += new System.EventHandler(this.addContact_Click);
             // 
             // contactDGV
             // 
@@ -399,8 +410,10 @@
             this.contactDGV.MultiSelect = false;
             this.contactDGV.Name = "contactDGV";
             this.contactDGV.ReadOnly = true;
+            this.contactDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.contactDGV.Size = new System.Drawing.Size(966, 156);
             this.contactDGV.TabIndex = 73;
+            this.contactDGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getContact);
             // 
             // contact_lastname
             // 
@@ -437,15 +450,41 @@
             this.post.Name = "post";
             this.post.ReadOnly = true;
             // 
-            // addContact
+            // tabPage2
             // 
-            this.addContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addContact.Location = new System.Drawing.Point(0, 162);
-            this.addContact.Name = "addContact";
-            this.addContact.Size = new System.Drawing.Size(966, 37);
-            this.addContact.TabIndex = 77;
-            this.addContact.Text = "Ajouter contact";
-            this.addContact.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.studentsResult);
+            this.tabPage2.Controls.Add(this.addStudentTraining);
+            this.tabPage2.Controls.Add(this.studentsTrainingDGV);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(966, 199);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Élèves en satge";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // studentsResult
+            // 
+            this.studentsResult.AutoSize = true;
+            this.studentsResult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.studentsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentsResult.Location = new System.Drawing.Point(293, 68);
+            this.studentsResult.Name = "studentsResult";
+            this.studentsResult.Size = new System.Drawing.Size(397, 31);
+            this.studentsResult.TabIndex = 79;
+            this.studentsResult.Text = "Pas d\'élèves en stage à afficher";
+            this.studentsResult.Visible = false;
+            // 
+            // addStudentTraining
+            // 
+            this.addStudentTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addStudentTraining.Location = new System.Drawing.Point(0, 162);
+            this.addStudentTraining.Name = "addStudentTraining";
+            this.addStudentTraining.Size = new System.Drawing.Size(966, 37);
+            this.addStudentTraining.TabIndex = 78;
+            this.addStudentTraining.Text = "Ajouter élève en stage";
+            this.addStudentTraining.UseVisualStyleBackColor = true;
+            this.addStudentTraining.Click += new System.EventHandler(this.addStudentTraining_Click);
             // 
             // studentsTrainingDGV
             // 
@@ -465,8 +504,10 @@
             this.studentsTrainingDGV.Location = new System.Drawing.Point(0, 0);
             this.studentsTrainingDGV.Name = "studentsTrainingDGV";
             this.studentsTrainingDGV.ReadOnly = true;
+            this.studentsTrainingDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentsTrainingDGV.Size = new System.Drawing.Size(966, 156);
             this.studentsTrainingDGV.TabIndex = 75;
+            this.studentsTrainingDGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getStudent);
             // 
             // student_lastname
             // 
@@ -512,15 +553,98 @@
             this.teacher_firstname.Name = "teacher_firstname";
             this.teacher_firstname.ReadOnly = true;
             // 
-            // button1
+            // tabPage3
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(0, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(966, 37);
-            this.button1.TabIndex = 78;
-            this.button1.Text = "Ajouter élève en stage";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.postItResult);
+            this.tabPage3.Controls.Add(this.addPostIt);
+            this.tabPage3.Controls.Add(this.postItDGV);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(966, 199);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Remarques";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // postItResult
+            // 
+            this.postItResult.AutoSize = true;
+            this.postItResult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.postItResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postItResult.Location = new System.Drawing.Point(285, 68);
+            this.postItResult.Name = "postItResult";
+            this.postItResult.Size = new System.Drawing.Size(353, 31);
+            this.postItResult.TabIndex = 80;
+            this.postItResult.Text = "Pas de remarques à afficher";
+            this.postItResult.Visible = false;
+            // 
+            // addPostIt
+            // 
+            this.addPostIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addPostIt.Location = new System.Drawing.Point(0, 162);
+            this.addPostIt.Name = "addPostIt";
+            this.addPostIt.Size = new System.Drawing.Size(966, 37);
+            this.addPostIt.TabIndex = 79;
+            this.addPostIt.Text = "Ajouter remarque";
+            this.addPostIt.UseVisualStyleBackColor = true;
+            this.addPostIt.Click += new System.EventHandler(this.addPostIt_Click);
+            // 
+            // postItDGV
+            // 
+            this.postItDGV.AllowUserToAddRows = false;
+            this.postItDGV.AllowUserToDeleteRows = false;
+            this.postItDGV.AllowUserToResizeColumns = false;
+            this.postItDGV.AllowUserToResizeRows = false;
+            this.postItDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.postItDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.postItDGV.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.postItDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.postItDGV.Location = new System.Drawing.Point(0, 0);
+            this.postItDGV.MultiSelect = false;
+            this.postItDGV.Name = "postItDGV";
+            this.postItDGV.ReadOnly = true;
+            this.postItDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.postItDGV.Size = new System.Drawing.Size(966, 156);
+            this.postItDGV.TabIndex = 78;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "to_name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "A";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "from_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "De";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "post_it_date";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "subject";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Objet";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "notes";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Notes";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // button2
             // 
@@ -541,121 +665,6 @@
             this.add.TabIndex = 84;
             this.add.Text = "Modifier entreprise";
             this.add.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.postItResult);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(966, 199);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Remarques";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(0, 162);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(966, 37);
-            this.button3.TabIndex = 79;
-            this.button3.Text = "Ajouter remarque";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(966, 156);
-            this.dataGridView1.TabIndex = 78;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "contact_lastname";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "contact_firstname";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Prénom";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "direct_phone";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ligne directe";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "post";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Poste";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // contactsResult
-            // 
-            this.contactsResult.AutoSize = true;
-            this.contactsResult.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.contactsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsResult.Location = new System.Drawing.Point(322, 68);
-            this.contactsResult.Name = "contactsResult";
-            this.contactsResult.Size = new System.Drawing.Size(327, 31);
-            this.contactsResult.TabIndex = 78;
-            this.contactsResult.Text = "Pas de contacts à afficher";
-            this.contactsResult.Visible = false;
-            // 
-            // studentsResult
-            // 
-            this.studentsResult.AutoSize = true;
-            this.studentsResult.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.studentsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentsResult.Location = new System.Drawing.Point(293, 68);
-            this.studentsResult.Name = "studentsResult";
-            this.studentsResult.Size = new System.Drawing.Size(397, 31);
-            this.studentsResult.TabIndex = 79;
-            this.studentsResult.Text = "Pas d\'élèves en stage à afficher";
-            this.studentsResult.Visible = false;
-            // 
-            // postItResult
-            // 
-            this.postItResult.AutoSize = true;
-            this.postItResult.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.postItResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postItResult.Location = new System.Drawing.Point(285, 68);
-            this.postItResult.Name = "postItResult";
-            this.postItResult.Size = new System.Drawing.Size(353, 31);
-            this.postItResult.TabIndex = 80;
-            this.postItResult.Text = "Pas de remarques à afficher";
-            this.postItResult.Visible = false;
             // 
             // companyFoundForm
             // 
@@ -696,17 +705,18 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "companyFoundForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultat de recherche";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postItDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -758,19 +768,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn course_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacher_lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addStudentTraining;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button addPostIt;
+        private System.Windows.Forms.DataGridView postItDGV;
+        private System.Windows.Forms.Label contactsResult;
+        private System.Windows.Forms.Label studentsResult;
+        private System.Windows.Forms.Label postItResult;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Label contactsResult;
-        private System.Windows.Forms.Label studentsResult;
-        private System.Windows.Forms.Label postItResult;
     }
 }

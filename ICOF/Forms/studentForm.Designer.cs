@@ -68,6 +68,7 @@
             this.add.TabIndex = 82;
             this.add.Text = "Ajouter élève en stage";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label4
             // 
@@ -94,7 +95,8 @@
             this.lastName_TB.Location = new System.Drawing.Point(331, 116);
             this.lastName_TB.Name = "lastName_TB";
             this.lastName_TB.Size = new System.Drawing.Size(260, 20);
-            this.lastName_TB.TabIndex = 75;
+            this.lastName_TB.TabIndex = 2;
+            this.lastName_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label2
             // 
@@ -111,7 +113,8 @@
             this.firstName_TB.Location = new System.Drawing.Point(331, 76);
             this.firstName_TB.Name = "firstName_TB";
             this.firstName_TB.Size = new System.Drawing.Size(260, 20);
-            this.firstName_TB.TabIndex = 71;
+            this.firstName_TB.TabIndex = 1;
+            this.firstName_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label5
             // 
@@ -148,7 +151,8 @@
             this.jobYear_TB.Location = new System.Drawing.Point(331, 156);
             this.jobYear_TB.Name = "jobYear_TB";
             this.jobYear_TB.Size = new System.Drawing.Size(260, 20);
-            this.jobYear_TB.TabIndex = 85;
+            this.jobYear_TB.TabIndex = 3;
+            this.jobYear_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // courseDone_CB
             // 
@@ -156,14 +160,15 @@
             this.courseDone_CB.Location = new System.Drawing.Point(331, 196);
             this.courseDone_CB.Name = "courseDone_CB";
             this.courseDone_CB.Size = new System.Drawing.Size(260, 21);
-            this.courseDone_CB.TabIndex = 86;
+            this.courseDone_CB.TabIndex = 4;
             // 
             // teacherLastname_TB
             // 
             this.teacherLastname_TB.Location = new System.Drawing.Point(331, 236);
             this.teacherLastname_TB.Name = "teacherLastname_TB";
             this.teacherLastname_TB.Size = new System.Drawing.Size(260, 20);
-            this.teacherLastname_TB.TabIndex = 88;
+            this.teacherLastname_TB.TabIndex = 5;
+            this.teacherLastname_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label6
             // 
@@ -180,7 +185,8 @@
             this.teacherFirstname_TB.Location = new System.Drawing.Point(331, 280);
             this.teacherFirstname_TB.Name = "teacherFirstname_TB";
             this.teacherFirstname_TB.Size = new System.Drawing.Size(260, 20);
-            this.teacherFirstname_TB.TabIndex = 90;
+            this.teacherFirstname_TB.TabIndex = 6;
+            this.teacherFirstname_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label8
             // 
@@ -244,6 +250,7 @@
             this.MinimizeBox = false;
             this.Name = "studentForm";
             this.Text = "Ajouter élève en stage";
+            this.Leave += new System.EventHandler(this.outControl);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -56,6 +56,20 @@ namespace ICOF.Forms
             }
         }
 
+        private void add_Click(object sender, EventArgs e)
+        {
+            if (_wrongForm) MessageBox.Show("Revisez vos champs", "Ajouter élève en stage", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                /*if (_control.insertPostIt(_postIt).Equals("OK"))
+                {
+                    MessageBox.Show("Remarque ajouté correctement", "Ajouter remarque", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else MessageBox.Show("Pas possible d'ajouter. Cette remarque existe dejà.", "Ajouter remarque", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+            }
+        }
+
         private void modify_Click(object sender, EventArgs e)
         {
             modify.Visible = false;

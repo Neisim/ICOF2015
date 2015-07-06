@@ -44,7 +44,7 @@ namespace ICOF.Entities
         public void setCompanyName(String companyName)              { _companyName = companyName; }
         public void setJobYear(int jobYear)                         { _jobYear = jobYear; }
         public void setCourseName(String courseName)                { _courseName = courseName; }
-        public void getTeacherFirstName(String teacherFirstName)    { _teacherFirstName = teacherFirstName; }
-        public void getTeacherLastName(String teacherLastName)      {_teacherLastName = teacherLastName; }
+        public void setTeacherFirstName(String teacherFirstName)    { _teacherFirstName = teacherFirstName; }
+        public void setTeacherLastName(String teacherLastName)      {_teacherLastName = teacherLastName; }
     }
 }

@@ -99,6 +99,7 @@
             this.add.TabIndex = 95;
             this.add.Text = "Ajouter contacte";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label4
             // 
@@ -171,8 +172,9 @@
             this.modify.Name = "modify";
             this.modify.Size = new System.Drawing.Size(481, 43);
             this.modify.TabIndex = 104;
-            this.modify.Text = "Modifier _contact";
+            this.modify.Text = "Modifier contact";
             this.modify.UseVisualStyleBackColor = true;
+            this.modify.Visible = false;
             this.modify.Click += new System.EventHandler(this.modify_Click);
             // 
             // confirm

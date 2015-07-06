@@ -207,7 +207,7 @@ namespace ICOF
             if (_wrongForm) MessageBox.Show("Revisez vos champs", "Ajouter personne", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                //Old student
+                //Old _student
                 if (_person.getIcofPost().Equals("Ancien élève"))
                 {
                     _person.setCourseDone(courseDone_CB.Text);

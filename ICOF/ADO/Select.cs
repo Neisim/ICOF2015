@@ -7,6 +7,8 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.Collections;
+using ICOF.Entities;
+
 namespace ICOF.ADO
 {
     public class Select
@@ -89,17 +91,28 @@ namespace ICOF.ADO
             return persons;
         }
 
-        public void selectPostIt()
+        public DataTable selectPostIt(Company company)
         {
             //SELECT POSTIT
             dataBase = new DataBase();
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
+            MySqlCommand SqlCommand = null;
+            MySqlDataAdapter adapter = null;
+            DataTable postIt = new DataTable();
+            String sqlQuery = "SELECT * FROM post_it WHERE phone = @companyPhone;";
+            SqlCommand = new MySqlCommand(sqlQuery, connection);
+            SqlCommand.Parameters.AddWithValue("@companyPhone", company.getPhone());
+
+            adapter = new MySqlDataAdapter(SqlCommand);
+            adapter.Fill(postIt);
             connection.Close();
+
+            return postIt;
         }
 
-        public DataTable selectContactCompany(String companyName)
+        public DataTable selectContactCompany(Company company)
         { 
             //SELECT CONTACT COMPANY
             dataBase = new DataBase();
@@ -111,7 +124,7 @@ namespace ICOF.ADO
             DataTable contacts = new DataTable();
             String sqlQuery = "SELECT * FROM company_contact WHERE company_name = @companyName;";
             SqlCommand = new MySqlCommand(sqlQuery, connection);
-            SqlCommand.Parameters.AddWithValue("@companyName", companyName);
+            SqlCommand.Parameters.AddWithValue("@companyName", company.getName());
 
             adapter = new MySqlDataAdapter(SqlCommand);
             adapter.Fill(contacts);
@@ -120,19 +133,21 @@ namespace ICOF.ADO
             return contacts;
         }
 
-        public DataTable selectTrainigStudent(String companyName)
+        public DataTable selectTrainigStudent(Company company)
         { 
             //SELECT TRAINING STUDENTS
             dataBase = new DataBase();
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            MySqlCommand sqlCommand = null;
+            MySqlCommand SqlCommand = null;
             MySqlDataAdapter adapter = null;
             DataTable students = new DataTable();
-            String sqlQuery = "SELECT * FROM students_training WHERE company_name='" + companyName + "'";
-            sqlCommand = new MySqlCommand(sqlQuery, connection);
-            adapter = new MySqlDataAdapter(sqlCommand);
+            String sqlQuery = "SELECT * FROM students_training WHERE company_name = @companyName;";
+            SqlCommand = new MySqlCommand(sqlQuery, connection);
+            SqlCommand.Parameters.AddWithValue("@companyName", company.getName());
+            
+            adapter = new MySqlDataAdapter(SqlCommand);
             adapter.Fill(students);
             connection.Close();
 
