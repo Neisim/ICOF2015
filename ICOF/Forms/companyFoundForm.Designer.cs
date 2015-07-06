@@ -55,34 +55,51 @@
             this.montant_prevLB = new System.Windows.Forms.Label();
             this.modify = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
-            this.post = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direct_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contact_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contact_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.contactDGV = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.teacher_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teacher_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.job_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.student_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.student_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentsTrainingDGV = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.contact_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direct_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.post = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addContact = new System.Windows.Forms.Button();
+            this.studentsTrainingDGV = new System.Windows.Forms.DataGridView();
+            this.student_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.job_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacher_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teacher_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactsResult = new System.Windows.Forms.Label();
             this.studentsResult = new System.Windows.Forms.Label();
+            this.postItResult = new System.Windows.Forms.Label();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 74);
+            this.label5.Location = new System.Drawing.Point(65, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 20);
             this.label5.TabIndex = 23;
@@ -92,7 +109,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 18);
+            this.label1.Location = new System.Drawing.Point(63, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 31);
             this.label1.TabIndex = 17;
@@ -101,7 +118,7 @@
             // companyName_TB
             // 
             this.companyName_TB.Enabled = false;
-            this.companyName_TB.Location = new System.Drawing.Point(242, 74);
+            this.companyName_TB.Location = new System.Drawing.Point(243, 74);
             this.companyName_TB.Name = "companyName_TB";
             this.companyName_TB.Size = new System.Drawing.Size(260, 20);
             this.companyName_TB.TabIndex = 1;
@@ -109,7 +126,7 @@
             // companyAddress_TB
             // 
             this.companyAddress_TB.Enabled = false;
-            this.companyAddress_TB.Location = new System.Drawing.Point(242, 114);
+            this.companyAddress_TB.Location = new System.Drawing.Point(243, 114);
             this.companyAddress_TB.Name = "companyAddress_TB";
             this.companyAddress_TB.Size = new System.Drawing.Size(260, 20);
             this.companyAddress_TB.TabIndex = 2;
@@ -118,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 114);
+            this.label2.Location = new System.Drawing.Point(65, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 43;
@@ -127,7 +144,7 @@
             // companyEmail_TB
             // 
             this.companyEmail_TB.Enabled = false;
-            this.companyEmail_TB.Location = new System.Drawing.Point(242, 194);
+            this.companyEmail_TB.Location = new System.Drawing.Point(243, 194);
             this.companyEmail_TB.Name = "companyEmail_TB";
             this.companyEmail_TB.Size = new System.Drawing.Size(260, 20);
             this.companyEmail_TB.TabIndex = 4;
@@ -136,7 +153,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 194);
+            this.label3.Location = new System.Drawing.Point(65, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 20);
             this.label3.TabIndex = 47;
@@ -145,7 +162,7 @@
             // companyPhone_TB
             // 
             this.companyPhone_TB.Enabled = false;
-            this.companyPhone_TB.Location = new System.Drawing.Point(242, 154);
+            this.companyPhone_TB.Location = new System.Drawing.Point(243, 154);
             this.companyPhone_TB.Name = "companyPhone_TB";
             this.companyPhone_TB.Size = new System.Drawing.Size(260, 20);
             this.companyPhone_TB.TabIndex = 3;
@@ -154,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 154);
+            this.label4.Location = new System.Drawing.Point(65, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 20);
             this.label4.TabIndex = 45;
@@ -163,7 +180,7 @@
             // companyActivity_TB
             // 
             this.companyActivity_TB.Enabled = false;
-            this.companyActivity_TB.Location = new System.Drawing.Point(242, 234);
+            this.companyActivity_TB.Location = new System.Drawing.Point(243, 234);
             this.companyActivity_TB.Name = "companyActivity_TB";
             this.companyActivity_TB.Size = new System.Drawing.Size(260, 20);
             this.companyActivity_TB.TabIndex = 5;
@@ -172,7 +189,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 234);
+            this.label6.Location = new System.Drawing.Point(65, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 49;
@@ -182,7 +199,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(64, 274);
+            this.label11.Location = new System.Drawing.Point(65, 274);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(152, 20);
             this.label11.TabIndex = 52;
@@ -192,7 +209,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(557, 74);
+            this.label12.Location = new System.Drawing.Point(558, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 20);
             this.label12.TabIndex = 54;
@@ -201,16 +218,16 @@
             // fax_TB
             // 
             this.fax_TB.Enabled = false;
-            this.fax_TB.Location = new System.Drawing.Point(735, 114);
+            this.fax_TB.Location = new System.Drawing.Point(736, 114);
             this.fax_TB.Name = "fax_TB";
-            this.fax_TB.Size = new System.Drawing.Size(260, 20);
+            this.fax_TB.Size = new System.Drawing.Size(303, 20);
             this.fax_TB.TabIndex = 8;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(557, 114);
+            this.label14.Location = new System.Drawing.Point(558, 114);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 20);
             this.label14.TabIndex = 56;
@@ -220,7 +237,7 @@
             // 
             this.taxe_CB.Enabled = false;
             this.taxe_CB.FormattingEnabled = true;
-            this.taxe_CB.Location = new System.Drawing.Point(242, 274);
+            this.taxe_CB.Location = new System.Drawing.Point(243, 274);
             this.taxe_CB.Name = "taxe_CB";
             this.taxe_CB.Size = new System.Drawing.Size(260, 21);
             this.taxe_CB.TabIndex = 6;
@@ -229,7 +246,7 @@
             // 
             this.montantLB.AutoSize = true;
             this.montantLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montantLB.Location = new System.Drawing.Point(557, 194);
+            this.montantLB.Location = new System.Drawing.Point(558, 194);
             this.montantLB.Name = "montantLB";
             this.montantLB.Size = new System.Drawing.Size(115, 20);
             this.montantLB.TabIndex = 61;
@@ -238,24 +255,24 @@
             // currentTA_TB
             // 
             this.currentTA_TB.Enabled = false;
-            this.currentTA_TB.Location = new System.Drawing.Point(735, 194);
+            this.currentTA_TB.Location = new System.Drawing.Point(736, 194);
             this.currentTA_TB.Name = "currentTA_TB";
-            this.currentTA_TB.Size = new System.Drawing.Size(260, 20);
+            this.currentTA_TB.Size = new System.Drawing.Size(303, 20);
             this.currentTA_TB.TabIndex = 9;
             // 
             // currentYear_TB
             // 
             this.currentYear_TB.Enabled = false;
-            this.currentYear_TB.Location = new System.Drawing.Point(735, 154);
+            this.currentYear_TB.Location = new System.Drawing.Point(736, 154);
             this.currentYear_TB.Name = "currentYear_TB";
-            this.currentYear_TB.Size = new System.Drawing.Size(260, 20);
+            this.currentYear_TB.Size = new System.Drawing.Size(303, 20);
             this.currentYear_TB.TabIndex = 10;
             // 
             // anneeLB
             // 
             this.anneeLB.AutoSize = true;
             this.anneeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anneeLB.Location = new System.Drawing.Point(557, 154);
+            this.anneeLB.Location = new System.Drawing.Point(558, 154);
             this.anneeLB.Name = "anneeLB";
             this.anneeLB.Size = new System.Drawing.Size(112, 20);
             this.anneeLB.TabIndex = 63;
@@ -265,24 +282,24 @@
             // 
             this.training_CB.Enabled = false;
             this.training_CB.FormattingEnabled = true;
-            this.training_CB.Location = new System.Drawing.Point(735, 74);
+            this.training_CB.Location = new System.Drawing.Point(736, 74);
             this.training_CB.Name = "training_CB";
-            this.training_CB.Size = new System.Drawing.Size(260, 21);
+            this.training_CB.Size = new System.Drawing.Size(303, 21);
             this.training_CB.TabIndex = 7;
             // 
             // previousYear_TB
             // 
             this.previousYear_TB.Enabled = false;
-            this.previousYear_TB.Location = new System.Drawing.Point(735, 234);
+            this.previousYear_TB.Location = new System.Drawing.Point(736, 234);
             this.previousYear_TB.Name = "previousYear_TB";
-            this.previousYear_TB.Size = new System.Drawing.Size(260, 20);
+            this.previousYear_TB.Size = new System.Drawing.Size(303, 20);
             this.previousYear_TB.TabIndex = 13;
             // 
             // annee_prevLB
             // 
             this.annee_prevLB.AutoSize = true;
             this.annee_prevLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.annee_prevLB.Location = new System.Drawing.Point(557, 234);
+            this.annee_prevLB.Location = new System.Drawing.Point(558, 234);
             this.annee_prevLB.Name = "annee_prevLB";
             this.annee_prevLB.Size = new System.Drawing.Size(132, 20);
             this.annee_prevLB.TabIndex = 70;
@@ -291,16 +308,16 @@
             // previousTA_TB
             // 
             this.previousTA_TB.Enabled = false;
-            this.previousTA_TB.Location = new System.Drawing.Point(735, 274);
+            this.previousTA_TB.Location = new System.Drawing.Point(736, 274);
             this.previousTA_TB.Name = "previousTA_TB";
-            this.previousTA_TB.Size = new System.Drawing.Size(260, 20);
+            this.previousTA_TB.Size = new System.Drawing.Size(303, 20);
             this.previousTA_TB.TabIndex = 11;
             // 
             // montant_prevLB
             // 
             this.montant_prevLB.AutoSize = true;
             this.montant_prevLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montant_prevLB.Location = new System.Drawing.Point(557, 274);
+            this.montant_prevLB.Location = new System.Drawing.Point(558, 274);
             this.montant_prevLB.Name = "montant_prevLB";
             this.montant_prevLB.Size = new System.Drawing.Size(144, 20);
             this.montant_prevLB.TabIndex = 69;
@@ -326,40 +343,42 @@
             this.clear.Text = "Ajouter remarque";
             this.clear.UseVisualStyleBackColor = true;
             // 
-            // post
+            // tabControl1
             // 
-            this.post.DataPropertyName = "post";
-            this.post.HeaderText = "Poste";
-            this.post.Name = "post";
-            this.post.ReadOnly = true;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(69, 319);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(974, 225);
+            this.tabControl1.TabIndex = 82;
             // 
-            // email
+            // tabPage1
             // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
+            this.tabPage1.Controls.Add(this.contactsResult);
+            this.tabPage1.Controls.Add(this.addContact);
+            this.tabPage1.Controls.Add(this.contactDGV);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(966, 199);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Contacts";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // direct_phone
+            // tabPage2
             // 
-            this.direct_phone.DataPropertyName = "direct_phone";
-            this.direct_phone.HeaderText = "Ligne directe";
-            this.direct_phone.Name = "direct_phone";
-            this.direct_phone.ReadOnly = true;
-            // 
-            // contact_firstname
-            // 
-            this.contact_firstname.DataPropertyName = "contact_firstname";
-            this.contact_firstname.HeaderText = "Prénom";
-            this.contact_firstname.Name = "contact_firstname";
-            this.contact_firstname.ReadOnly = true;
-            // 
-            // contact_lastname
-            // 
-            this.contact_lastname.DataPropertyName = "contact_lastname";
-            this.contact_lastname.HeaderText = "Nom";
-            this.contact_lastname.Name = "contact_lastname";
-            this.contact_lastname.ReadOnly = true;
+            this.tabPage2.Controls.Add(this.studentsResult);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.studentsTrainingDGV);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(966, 199);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Élèves en satge";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // contactDGV
             // 
@@ -368,39 +387,114 @@
             this.contactDGV.AllowUserToResizeColumns = false;
             this.contactDGV.AllowUserToResizeRows = false;
             this.contactDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.contactDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.contactDGV.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.contactDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.contactDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.contact_lastname,
             this.contact_firstname,
             this.direct_phone,
             this.email,
             this.post});
-            this.contactDGV.Location = new System.Drawing.Point(68, 386);
+            this.contactDGV.Location = new System.Drawing.Point(0, 0);
             this.contactDGV.MultiSelect = false;
             this.contactDGV.Name = "contactDGV";
             this.contactDGV.ReadOnly = true;
-            this.contactDGV.Size = new System.Drawing.Size(927, 150);
-            this.contactDGV.TabIndex = 72;
-            this.contactDGV.DoubleClick += new System.EventHandler(this.getContacts);
+            this.contactDGV.Size = new System.Drawing.Size(966, 156);
+            this.contactDGV.TabIndex = 73;
             // 
-            // label7
+            // contact_lastname
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 330);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 31);
-            this.label7.TabIndex = 73;
-            this.label7.Text = "Contacts";
+            this.contact_lastname.DataPropertyName = "contact_lastname";
+            this.contact_lastname.HeaderText = "Nom";
+            this.contact_lastname.Name = "contact_lastname";
+            this.contact_lastname.ReadOnly = true;
             // 
-            // teacher_firstname
+            // contact_firstname
             // 
-            this.teacher_firstname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.teacher_firstname.DataPropertyName = "teacher_firstname";
-            this.teacher_firstname.HeaderText = "Prénom maitre apprentissage";
-            this.teacher_firstname.Name = "teacher_firstname";
-            this.teacher_firstname.ReadOnly = true;
+            this.contact_firstname.DataPropertyName = "contact_firstname";
+            this.contact_firstname.HeaderText = "Prénom";
+            this.contact_firstname.Name = "contact_firstname";
+            this.contact_firstname.ReadOnly = true;
+            // 
+            // direct_phone
+            // 
+            this.direct_phone.DataPropertyName = "direct_phone";
+            this.direct_phone.HeaderText = "Ligne directe";
+            this.direct_phone.Name = "direct_phone";
+            this.direct_phone.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // post
+            // 
+            this.post.DataPropertyName = "post";
+            this.post.HeaderText = "Poste";
+            this.post.Name = "post";
+            this.post.ReadOnly = true;
+            // 
+            // addContact
+            // 
+            this.addContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addContact.Location = new System.Drawing.Point(0, 162);
+            this.addContact.Name = "addContact";
+            this.addContact.Size = new System.Drawing.Size(966, 37);
+            this.addContact.TabIndex = 77;
+            this.addContact.Text = "Ajouter contact";
+            this.addContact.UseVisualStyleBackColor = true;
+            // 
+            // studentsTrainingDGV
+            // 
+            this.studentsTrainingDGV.AllowUserToAddRows = false;
+            this.studentsTrainingDGV.AllowUserToDeleteRows = false;
+            this.studentsTrainingDGV.AllowUserToResizeColumns = false;
+            this.studentsTrainingDGV.AllowUserToResizeRows = false;
+            this.studentsTrainingDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.studentsTrainingDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.studentsTrainingDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.student_lastname,
+            this.student_firstname,
+            this.job_year,
+            this.course_name,
+            this.teacher_lastname,
+            this.teacher_firstname});
+            this.studentsTrainingDGV.Location = new System.Drawing.Point(0, 0);
+            this.studentsTrainingDGV.Name = "studentsTrainingDGV";
+            this.studentsTrainingDGV.ReadOnly = true;
+            this.studentsTrainingDGV.Size = new System.Drawing.Size(966, 156);
+            this.studentsTrainingDGV.TabIndex = 75;
+            // 
+            // student_lastname
+            // 
+            this.student_lastname.DataPropertyName = "student_lastname";
+            this.student_lastname.HeaderText = "Nom élève";
+            this.student_lastname.Name = "student_lastname";
+            this.student_lastname.ReadOnly = true;
+            // 
+            // student_firstname
+            // 
+            this.student_firstname.DataPropertyName = "student_firstname";
+            this.student_firstname.HeaderText = "Prénom élève";
+            this.student_firstname.Name = "student_firstname";
+            this.student_firstname.ReadOnly = true;
+            // 
+            // job_year
+            // 
+            this.job_year.DataPropertyName = "job_year";
+            this.job_year.HeaderText = "Année de stage";
+            this.job_year.Name = "job_year";
+            this.job_year.ReadOnly = true;
+            // 
+            // course_name
+            // 
+            this.course_name.DataPropertyName = "course_name";
+            this.course_name.HeaderText = "Formation";
+            this.course_name.Name = "course_name";
+            this.course_name.ReadOnly = true;
             // 
             // teacher_lastname
             // 
@@ -410,96 +504,133 @@
             this.teacher_lastname.Name = "teacher_lastname";
             this.teacher_lastname.ReadOnly = true;
             // 
-            // course_name
+            // teacher_firstname
             // 
-            this.course_name.DataPropertyName = "course_name";
-            this.course_name.HeaderText = "Formation";
-            this.course_name.Name = "course_name";
-            this.course_name.ReadOnly = true;
+            this.teacher_firstname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.teacher_firstname.DataPropertyName = "teacher_firstname";
+            this.teacher_firstname.HeaderText = "Prénom maitre apprentissage";
+            this.teacher_firstname.Name = "teacher_firstname";
+            this.teacher_firstname.ReadOnly = true;
             // 
-            // job_year
+            // button1
             // 
-            this.job_year.DataPropertyName = "job_year";
-            this.job_year.HeaderText = "Année de stage";
-            this.job_year.Name = "job_year";
-            this.job_year.ReadOnly = true;
-            // 
-            // student_firstname
-            // 
-            this.student_firstname.DataPropertyName = "student_firstname";
-            this.student_firstname.HeaderText = "Prénom élève";
-            this.student_firstname.Name = "student_firstname";
-            this.student_firstname.ReadOnly = true;
-            // 
-            // student_lastname
-            // 
-            this.student_lastname.DataPropertyName = "student_lastname";
-            this.student_lastname.HeaderText = "Nom élève";
-            this.student_lastname.Name = "student_lastname";
-            this.student_lastname.ReadOnly = true;
-            // 
-            // studentsTrainingDGV
-            // 
-            this.studentsTrainingDGV.AllowUserToAddRows = false;
-            this.studentsTrainingDGV.AllowUserToDeleteRows = false;
-            this.studentsTrainingDGV.AllowUserToResizeColumns = false;
-            this.studentsTrainingDGV.AllowUserToResizeRows = false;
-            this.studentsTrainingDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.studentsTrainingDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.student_lastname,
-            this.student_firstname,
-            this.job_year,
-            this.course_name,
-            this.teacher_lastname,
-            this.teacher_firstname});
-            this.studentsTrainingDGV.Location = new System.Drawing.Point(68, 616);
-            this.studentsTrainingDGV.Name = "studentsTrainingDGV";
-            this.studentsTrainingDGV.ReadOnly = true;
-            this.studentsTrainingDGV.Size = new System.Drawing.Size(927, 150);
-            this.studentsTrainingDGV.TabIndex = 74;
-            this.studentsTrainingDGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getStudents);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 570);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(207, 31);
-            this.label8.TabIndex = 75;
-            this.label8.Text = "Élèves en stage";
-            // 
-            // addContact
-            // 
-            this.addContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addContact.Location = new System.Drawing.Point(565, 542);
-            this.addContact.Name = "addContact";
-            this.addContact.Size = new System.Drawing.Size(430, 37);
-            this.addContact.TabIndex = 76;
-            this.addContact.Text = "Ajouter _contact";
-            this.addContact.UseVisualStyleBackColor = true;
-            this.addContact.Click += new System.EventHandler(this.addContact_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(0, 162);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(966, 37);
+            this.button1.TabIndex = 78;
+            this.button1.Text = "Ajouter élève en stage";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(565, 772);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(69, 625);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(430, 37);
-            this.button2.TabIndex = 77;
-            this.button2.Text = "Ajouter élève en stage";
+            this.button2.Size = new System.Drawing.Size(974, 31);
+            this.button2.TabIndex = 85;
+            this.button2.Text = "Effacer le formulaire";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // add
+            // 
+            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Location = new System.Drawing.Point(69, 575);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(974, 43);
+            this.add.TabIndex = 84;
+            this.add.Text = "Modifier entreprise";
+            this.add.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.postItResult);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(966, 199);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Remarques";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button3.Location = new System.Drawing.Point(0, 162);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(966, 37);
+            this.button3.TabIndex = 79;
+            this.button3.Text = "Ajouter remarque";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(966, 156);
+            this.dataGridView1.TabIndex = 78;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "contact_lastname";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "contact_firstname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Prénom";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "direct_phone";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ligne directe";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "post";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Poste";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // contactsResult
             // 
             this.contactsResult.AutoSize = true;
             this.contactsResult.BackColor = System.Drawing.SystemColors.ControlDark;
             this.contactsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactsResult.Location = new System.Drawing.Point(382, 454);
+            this.contactsResult.Location = new System.Drawing.Point(322, 68);
             this.contactsResult.Name = "contactsResult";
-            this.contactsResult.Size = new System.Drawing.Size(342, 31);
-            this.contactsResult.TabIndex = 80;
-            this.contactsResult.Text = "Pas de contactes a afficher";
+            this.contactsResult.Size = new System.Drawing.Size(327, 31);
+            this.contactsResult.TabIndex = 78;
+            this.contactsResult.Text = "Pas de contacts à afficher";
             this.contactsResult.Visible = false;
             // 
             // studentsResult
@@ -507,29 +638,34 @@
             this.studentsResult.AutoSize = true;
             this.studentsResult.BackColor = System.Drawing.SystemColors.ControlDark;
             this.studentsResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentsResult.Location = new System.Drawing.Point(358, 683);
+            this.studentsResult.Location = new System.Drawing.Point(293, 68);
             this.studentsResult.Name = "studentsResult";
             this.studentsResult.Size = new System.Drawing.Size(397, 31);
-            this.studentsResult.TabIndex = 81;
-            this.studentsResult.Text = "Pas d\'élèves en stage a afficher";
+            this.studentsResult.TabIndex = 79;
+            this.studentsResult.Text = "Pas d\'élèves en stage à afficher";
             this.studentsResult.Visible = false;
+            // 
+            // postItResult
+            // 
+            this.postItResult.AutoSize = true;
+            this.postItResult.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.postItResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postItResult.Location = new System.Drawing.Point(285, 68);
+            this.postItResult.Name = "postItResult";
+            this.postItResult.Size = new System.Drawing.Size(353, 31);
+            this.postItResult.TabIndex = 80;
+            this.postItResult.Text = "Pas de remarques à afficher";
+            this.postItResult.Visible = false;
             // 
             // companyFoundForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1103, 949);
-            this.Controls.Add(this.studentsResult);
-            this.Controls.Add(this.contactsResult);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1112, 682);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.add);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.modify);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.addContact);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.studentsTrainingDGV);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.contactDGV);
             this.Controls.Add(this.previousYear_TB);
             this.Controls.Add(this.annee_prevLB);
             this.Controls.Add(this.previousTA_TB);
@@ -561,9 +697,16 @@
             this.MinimizeBox = false;
             this.Name = "companyFoundForm";
             this.Text = "Resultat de recherche";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,24 +741,36 @@
         private System.Windows.Forms.Label montant_prevLB;
         private System.Windows.Forms.Button modify;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn post;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direct_phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact_firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact_lastname;
-        private System.Windows.Forms.DataGridView contactDGV;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn course_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn job_year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn student_firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn student_lastname;
-        private System.Windows.Forms.DataGridView studentsTrainingDGV;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button addContact;
+        private System.Windows.Forms.DataGridView contactDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direct_phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn post;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView studentsTrainingDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn job_year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn course_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button add;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label contactsResult;
         private System.Windows.Forms.Label studentsResult;
+        private System.Windows.Forms.Label postItResult;
     }
 }

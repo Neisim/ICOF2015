@@ -286,7 +286,7 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(68, 364);
+            this.add.Location = new System.Drawing.Point(68, 365);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(887, 43);
             this.add.TabIndex = 9;
@@ -297,7 +297,7 @@
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(68, 414);
+            this.clear.Location = new System.Drawing.Point(68, 415);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(887, 31);
             this.clear.TabIndex = 11;
