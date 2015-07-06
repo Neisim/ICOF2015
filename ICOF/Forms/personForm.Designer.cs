@@ -1,6 +1,6 @@
 ﻿namespace ICOF
 {
-    partial class addPersonForm
+    partial class personForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.person_LB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,34 +38,36 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.prenomTB = new System.Windows.Forms.TextBox();
-            this.nomTB = new System.Windows.Forms.TextBox();
-            this.emailTB = new System.Windows.Forms.TextBox();
-            this.civiliteCB = new System.Windows.Forms.ComboBox();
-            this.telephoneTB = new System.Windows.Forms.TextBox();
-            this.posteICOF_CB = new System.Windows.Forms.ComboBox();
-            this.posteEntrepriseTB = new System.Windows.Forms.TextBox();
-            this.entrepriseTB = new System.Windows.Forms.TextBox();
-            this.anneeTB = new System.Windows.Forms.TextBox();
+            this.personFirstname_TB = new System.Windows.Forms.TextBox();
+            this.personLastname_TB = new System.Windows.Forms.TextBox();
+            this.personPhone_TB = new System.Windows.Forms.TextBox();
+            this.mmemr_CB = new System.Windows.Forms.ComboBox();
+            this.personEmail_TB = new System.Windows.Forms.TextBox();
+            this.postICOF_CB = new System.Windows.Forms.ComboBox();
+            this.companyPost_TB = new System.Windows.Forms.TextBox();
+            this.companyName_TB = new System.Windows.Forms.TextBox();
+            this.birthdate_TB = new System.Windows.Forms.TextBox();
             this.formationLB = new System.Windows.Forms.Label();
-            this.entreeTB = new System.Windows.Forms.TextBox();
+            this.yearIn_TB = new System.Windows.Forms.TextBox();
             this.entreeLB = new System.Windows.Forms.Label();
-            this.sortieTB = new System.Windows.Forms.TextBox();
+            this.yearOut_TB = new System.Windows.Forms.TextBox();
             this.sortieLB = new System.Windows.Forms.Label();
-            this.formationCB = new System.Windows.Forms.ComboBox();
+            this.courseDone_CB = new System.Windows.Forms.ComboBox();
             this.add = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
+            this.diploma_CB = new System.Windows.Forms.ComboBox();
+            this.diplomeLB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // person_LB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nouvelle personnel";
+            this.person_LB.AutoSize = true;
+            this.person_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.person_LB.Location = new System.Drawing.Point(62, 18);
+            this.person_LB.Name = "person_LB";
+            this.person_LB.Size = new System.Drawing.Size(246, 31);
+            this.person_LB.TabIndex = 0;
+            this.person_LB.Text = "Nouvelle personnel";
             // 
             // label2
             // 
@@ -103,9 +105,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(64, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
+            this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Email";
+            this.label6.Text = "Télephone";
             // 
             // label7
             // 
@@ -123,9 +125,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(63, 234);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.Size = new System.Drawing.Size(48, 20);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Télephone";
+            this.label8.Text = "Email";
             // 
             // label9
             // 
@@ -157,75 +159,75 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Poste a l\'ICOF";
             // 
-            // prenomTB
+            // personFirstname_TB
             // 
-            this.prenomTB.Location = new System.Drawing.Point(192, 154);
-            this.prenomTB.Name = "prenomTB";
-            this.prenomTB.Size = new System.Drawing.Size(260, 20);
-            this.prenomTB.TabIndex = 3;
-            this.prenomTB.Leave += new System.EventHandler(this.outControl);
+            this.personFirstname_TB.Location = new System.Drawing.Point(192, 154);
+            this.personFirstname_TB.Name = "personFirstname_TB";
+            this.personFirstname_TB.Size = new System.Drawing.Size(260, 20);
+            this.personFirstname_TB.TabIndex = 1;
+            this.personFirstname_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // nomTB
+            // personLastname_TB
             // 
-            this.nomTB.Location = new System.Drawing.Point(192, 114);
-            this.nomTB.Name = "nomTB";
-            this.nomTB.Size = new System.Drawing.Size(260, 20);
-            this.nomTB.TabIndex = 2;
-            this.nomTB.Leave += new System.EventHandler(this.outControl);
+            this.personLastname_TB.Location = new System.Drawing.Point(192, 114);
+            this.personLastname_TB.Name = "personLastname_TB";
+            this.personLastname_TB.Size = new System.Drawing.Size(260, 20);
+            this.personLastname_TB.TabIndex = 0;
+            this.personLastname_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // emailTB
+            // personPhone_TB
             // 
-            this.emailTB.Location = new System.Drawing.Point(192, 194);
-            this.emailTB.Name = "emailTB";
-            this.emailTB.Size = new System.Drawing.Size(260, 20);
-            this.emailTB.TabIndex = 4;
-            this.emailTB.Leave += new System.EventHandler(this.outControl);
+            this.personPhone_TB.Location = new System.Drawing.Point(192, 194);
+            this.personPhone_TB.Name = "personPhone_TB";
+            this.personPhone_TB.Size = new System.Drawing.Size(260, 20);
+            this.personPhone_TB.TabIndex = 2;
+            this.personPhone_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // civiliteCB
+            // mmemr_CB
             // 
-            this.civiliteCB.FormattingEnabled = true;
-            this.civiliteCB.Location = new System.Drawing.Point(192, 74);
-            this.civiliteCB.Name = "civiliteCB";
-            this.civiliteCB.Size = new System.Drawing.Size(260, 21);
-            this.civiliteCB.TabIndex = 13;
+            this.mmemr_CB.FormattingEnabled = true;
+            this.mmemr_CB.Location = new System.Drawing.Point(192, 74);
+            this.mmemr_CB.Name = "mmemr_CB";
+            this.mmemr_CB.Size = new System.Drawing.Size(260, 21);
+            this.mmemr_CB.TabIndex = 18;
             // 
-            // telephoneTB
+            // personEmail_TB
             // 
-            this.telephoneTB.Location = new System.Drawing.Point(192, 234);
-            this.telephoneTB.Name = "telephoneTB";
-            this.telephoneTB.Size = new System.Drawing.Size(260, 20);
-            this.telephoneTB.TabIndex = 5;
-            this.telephoneTB.Leave += new System.EventHandler(this.outControl);
+            this.personEmail_TB.Location = new System.Drawing.Point(192, 234);
+            this.personEmail_TB.Name = "personEmail_TB";
+            this.personEmail_TB.Size = new System.Drawing.Size(260, 20);
+            this.personEmail_TB.TabIndex = 3;
+            this.personEmail_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // posteICOF_CB
+            // postICOF_CB
             // 
-            this.posteICOF_CB.FormattingEnabled = true;
-            this.posteICOF_CB.Location = new System.Drawing.Point(192, 274);
-            this.posteICOF_CB.Name = "posteICOF_CB";
-            this.posteICOF_CB.Size = new System.Drawing.Size(260, 21);
-            this.posteICOF_CB.TabIndex = 6;
-            this.posteICOF_CB.SelectedIndexChanged += new System.EventHandler(this.posteICOF_CB_SelectedIndexChanged);
+            this.postICOF_CB.FormattingEnabled = true;
+            this.postICOF_CB.Location = new System.Drawing.Point(192, 274);
+            this.postICOF_CB.Name = "postICOF_CB";
+            this.postICOF_CB.Size = new System.Drawing.Size(260, 21);
+            this.postICOF_CB.TabIndex = 4;
+            this.postICOF_CB.SelectedIndexChanged += new System.EventHandler(this.postICOF_CB_SelectedIndexChanged);
             // 
-            // posteEntrepriseTB
+            // companyPost_TB
             // 
-            this.posteEntrepriseTB.Location = new System.Drawing.Point(695, 156);
-            this.posteEntrepriseTB.Name = "posteEntrepriseTB";
-            this.posteEntrepriseTB.Size = new System.Drawing.Size(260, 20);
-            this.posteEntrepriseTB.TabIndex = 9;
+            this.companyPost_TB.Location = new System.Drawing.Point(695, 156);
+            this.companyPost_TB.Name = "companyPost_TB";
+            this.companyPost_TB.Size = new System.Drawing.Size(260, 20);
+            this.companyPost_TB.TabIndex = 14;
             // 
-            // entrepriseTB
+            // companyName_TB
             // 
-            this.entrepriseTB.Location = new System.Drawing.Point(695, 114);
-            this.entrepriseTB.Name = "entrepriseTB";
-            this.entrepriseTB.Size = new System.Drawing.Size(260, 20);
-            this.entrepriseTB.TabIndex = 8;
+            this.companyName_TB.Location = new System.Drawing.Point(695, 114);
+            this.companyName_TB.Name = "companyName_TB";
+            this.companyName_TB.Size = new System.Drawing.Size(260, 20);
+            this.companyName_TB.TabIndex = 13;
             // 
-            // anneeTB
+            // birthdate_TB
             // 
-            this.anneeTB.Location = new System.Drawing.Point(695, 74);
-            this.anneeTB.Name = "anneeTB";
-            this.anneeTB.Size = new System.Drawing.Size(260, 20);
-            this.anneeTB.TabIndex = 7;
+            this.birthdate_TB.Location = new System.Drawing.Point(695, 74);
+            this.birthdate_TB.Name = "birthdate_TB";
+            this.birthdate_TB.Size = new System.Drawing.Size(260, 20);
+            this.birthdate_TB.TabIndex = 12;
             // 
             // formationLB
             // 
@@ -236,16 +238,14 @@
             this.formationLB.Size = new System.Drawing.Size(116, 20);
             this.formationLB.TabIndex = 12;
             this.formationLB.Text = "Formation faite";
-            this.formationLB.Visible = false;
             // 
-            // entreeTB
+            // yearIn_TB
             // 
-            this.entreeTB.Location = new System.Drawing.Point(695, 234);
-            this.entreeTB.Name = "entreeTB";
-            this.entreeTB.Size = new System.Drawing.Size(260, 20);
-            this.entreeTB.TabIndex = 11;
-            this.entreeTB.Visible = false;
-            this.entreeTB.Leave += new System.EventHandler(this.outControl);
+            this.yearIn_TB.Location = new System.Drawing.Point(695, 234);
+            this.yearIn_TB.Name = "yearIn_TB";
+            this.yearIn_TB.Size = new System.Drawing.Size(260, 20);
+            this.yearIn_TB.TabIndex = 6;
+            this.yearIn_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // entreeLB
             // 
@@ -256,16 +256,14 @@
             this.entreeLB.Size = new System.Drawing.Size(118, 20);
             this.entreeLB.TabIndex = 14;
             this.entreeLB.Text = "Année d\'entrée";
-            this.entreeLB.Visible = false;
             // 
-            // sortieTB
+            // yearOut_TB
             // 
-            this.sortieTB.Location = new System.Drawing.Point(695, 274);
-            this.sortieTB.Name = "sortieTB";
-            this.sortieTB.Size = new System.Drawing.Size(260, 20);
-            this.sortieTB.TabIndex = 12;
-            this.sortieTB.Visible = false;
-            this.sortieTB.Leave += new System.EventHandler(this.outControl);
+            this.yearOut_TB.Location = new System.Drawing.Point(695, 274);
+            this.yearOut_TB.Name = "yearOut_TB";
+            this.yearOut_TB.Size = new System.Drawing.Size(260, 20);
+            this.yearOut_TB.TabIndex = 7;
+            this.yearOut_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // sortieLB
             // 
@@ -276,60 +274,79 @@
             this.sortieLB.Size = new System.Drawing.Size(121, 20);
             this.sortieLB.TabIndex = 16;
             this.sortieLB.Text = "Année de sortie";
-            this.sortieLB.Visible = false;
             // 
-            // formationCB
+            // courseDone_CB
             // 
-            this.formationCB.FormattingEnabled = true;
-            this.formationCB.Location = new System.Drawing.Point(695, 194);
-            this.formationCB.Name = "formationCB";
-            this.formationCB.Size = new System.Drawing.Size(260, 21);
-            this.formationCB.TabIndex = 10;
-            this.formationCB.Visible = false;
+            this.courseDone_CB.FormattingEnabled = true;
+            this.courseDone_CB.Location = new System.Drawing.Point(695, 194);
+            this.courseDone_CB.Name = "courseDone_CB";
+            this.courseDone_CB.Size = new System.Drawing.Size(260, 21);
+            this.courseDone_CB.TabIndex = 5;
             // 
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(68, 324);
+            this.add.Location = new System.Drawing.Point(68, 364);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(887, 43);
-            this.add.TabIndex = 14;
+            this.add.TabIndex = 9;
             this.add.Text = "Ajouter personne";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(68, 374);
+            this.clear.Location = new System.Drawing.Point(68, 414);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(887, 31);
-            this.clear.TabIndex = 18;
+            this.clear.TabIndex = 11;
             this.clear.Text = "Effacer le formulaire";
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clearPerson);
             // 
-            // addPersonForm
+            // diploma_CB
+            // 
+            this.diploma_CB.FormattingEnabled = true;
+            this.diploma_CB.Location = new System.Drawing.Point(695, 315);
+            this.diploma_CB.Name = "diploma_CB";
+            this.diploma_CB.Size = new System.Drawing.Size(260, 21);
+            this.diploma_CB.TabIndex = 8;
+            // 
+            // diplomeLB
+            // 
+            this.diplomeLB.AutoSize = true;
+            this.diplomeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diplomeLB.Location = new System.Drawing.Point(500, 315);
+            this.diplomeLB.Name = "diplomeLB";
+            this.diplomeLB.Size = new System.Drawing.Size(160, 20);
+            this.diplomeLB.TabIndex = 21;
+            this.diplomeLB.Text = "Obtention du diplome";
+            // 
+            // personForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 429);
+            this.ClientSize = new System.Drawing.Size(986, 473);
+            this.Controls.Add(this.diploma_CB);
+            this.Controls.Add(this.diplomeLB);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.add);
-            this.Controls.Add(this.formationCB);
-            this.Controls.Add(this.sortieTB);
+            this.Controls.Add(this.courseDone_CB);
+            this.Controls.Add(this.yearOut_TB);
             this.Controls.Add(this.sortieLB);
-            this.Controls.Add(this.entreeTB);
+            this.Controls.Add(this.yearIn_TB);
             this.Controls.Add(this.entreeLB);
             this.Controls.Add(this.formationLB);
-            this.Controls.Add(this.anneeTB);
-            this.Controls.Add(this.entrepriseTB);
-            this.Controls.Add(this.posteEntrepriseTB);
-            this.Controls.Add(this.posteICOF_CB);
-            this.Controls.Add(this.telephoneTB);
-            this.Controls.Add(this.civiliteCB);
-            this.Controls.Add(this.emailTB);
-            this.Controls.Add(this.nomTB);
-            this.Controls.Add(this.prenomTB);
+            this.Controls.Add(this.birthdate_TB);
+            this.Controls.Add(this.companyName_TB);
+            this.Controls.Add(this.companyPost_TB);
+            this.Controls.Add(this.postICOF_CB);
+            this.Controls.Add(this.personEmail_TB);
+            this.Controls.Add(this.mmemr_CB);
+            this.Controls.Add(this.personPhone_TB);
+            this.Controls.Add(this.personLastname_TB);
+            this.Controls.Add(this.personFirstname_TB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -339,12 +356,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.person_LB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "addPersonForm";
-            this.Text = "Nouveaux personnel";
+            this.Name = "personForm";
+            this.Text = "Nouvelle personne";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,7 +369,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label person_LB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -362,22 +379,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox prenomTB;
-        private System.Windows.Forms.TextBox nomTB;
-        private System.Windows.Forms.TextBox emailTB;
-        private System.Windows.Forms.ComboBox civiliteCB;
-        private System.Windows.Forms.TextBox telephoneTB;
-        private System.Windows.Forms.ComboBox posteICOF_CB;
-        private System.Windows.Forms.TextBox posteEntrepriseTB;
-        private System.Windows.Forms.TextBox entrepriseTB;
-        private System.Windows.Forms.TextBox anneeTB;
+        private System.Windows.Forms.TextBox personFirstname_TB;
+        private System.Windows.Forms.TextBox personLastname_TB;
+        private System.Windows.Forms.TextBox personPhone_TB;
+        private System.Windows.Forms.ComboBox mmemr_CB;
+        private System.Windows.Forms.TextBox personEmail_TB;
+        private System.Windows.Forms.ComboBox postICOF_CB;
+        private System.Windows.Forms.TextBox companyPost_TB;
+        private System.Windows.Forms.TextBox companyName_TB;
+        private System.Windows.Forms.TextBox birthdate_TB;
         private System.Windows.Forms.Label formationLB;
-        private System.Windows.Forms.TextBox entreeTB;
+        private System.Windows.Forms.TextBox yearIn_TB;
         private System.Windows.Forms.Label entreeLB;
-        private System.Windows.Forms.TextBox sortieTB;
+        private System.Windows.Forms.TextBox yearOut_TB;
         private System.Windows.Forms.Label sortieLB;
-        private System.Windows.Forms.ComboBox formationCB;
+        private System.Windows.Forms.ComboBox courseDone_CB;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.ComboBox diploma_CB;
+        private System.Windows.Forms.Label diplomeLB;
     }
 }

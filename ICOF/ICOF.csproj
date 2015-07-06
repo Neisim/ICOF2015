@@ -45,55 +45,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="accessForm.cs">
+    <Compile Include="ADO\Insert.cs" />
+    <Compile Include="ADO\Select.cs" />
+    <Compile Include="ADO\Update.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\ContactCompany.cs" />
+    <Compile Include="Entities\ControlModifier.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\PostIt.cs" />
+    <Compile Include="Entities\TrainingStudent.cs" />
+    <Compile Include="Forms\accessForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="accessForm.Designer.cs">
+    <Compile Include="Forms\accessForm.Designer.cs">
       <DependentUpon>accessForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addCompanyForm.cs">
+    <Compile Include="Forms\companyFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addCompanyForm.Designer.cs">
-      <DependentUpon>addCompanyForm.cs</DependentUpon>
+    <Compile Include="Forms\companyFoundForm.Designer.cs">
+      <DependentUpon>companyFoundForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addContactForm.cs">
+    <Compile Include="Forms\companyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addContactForm.Designer.cs">
-      <DependentUpon>addContactForm.cs</DependentUpon>
+    <Compile Include="Forms\companyForm.Designer.cs">
+      <DependentUpon>companyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="addPersonForm.cs">
+    <Compile Include="Forms\contactForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addPersonForm.Designer.cs">
-      <DependentUpon>addPersonForm.cs</DependentUpon>
+    <Compile Include="Forms\contactForm.Designer.cs">
+      <DependentUpon>contactForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase.cs" />
-    <Compile Include="ControlChecker.cs" />
-    <Compile Include="Controller.cs" />
-    <Compile Include="mainForm.cs">
+    <Compile Include="Forms\postitForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mainForm.Designer.cs">
+    <Compile Include="Forms\postitForm.Designer.cs">
+      <DependentUpon>postitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\personForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\personForm.Designer.cs">
+      <DependentUpon>personForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\changePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\changePasswordForm.Designer.cs">
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADO\DataBase.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Forms\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="accessForm.resx">
+    <Compile Include="Forms\studentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\studentForm.Designer.cs">
+      <DependentUpon>studentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs" />
+    <EmbeddedResource Include="Forms\accessForm.resx">
       <DependentUpon>accessForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addCompanyForm.resx">
-      <DependentUpon>addCompanyForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\companyFoundForm.resx">
+      <DependentUpon>companyFoundForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addContactForm.resx">
-      <DependentUpon>addContactForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\companyForm.resx">
+      <DependentUpon>companyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addPersonForm.resx">
-      <DependentUpon>addPersonForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\contactForm.resx">
+      <DependentUpon>contactForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mainForm.resx">
+    <EmbeddedResource Include="Forms\postitForm.resx">
+      <DependentUpon>postitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\personForm.resx">
+      <DependentUpon>personForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\changePasswordForm.resx">
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -105,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\studentForm.resx">
+      <DependentUpon>studentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

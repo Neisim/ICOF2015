@@ -1,6 +1,6 @@
 ﻿namespace ICOF
 {
-    partial class addContactForm
+    partial class postItForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.de_contacteTB = new System.Windows.Forms.TextBox();
+            this.from_TB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.a_contacteTB = new System.Windows.Forms.TextBox();
+            this.to_TB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateDP = new System.Windows.Forms.DateTimePicker();
-            this.objetTB = new System.Windows.Forms.TextBox();
+            this.subject_TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.notesTB = new System.Windows.Forms.TextBox();
-            this.effacer = new System.Windows.Forms.Button();
-            this.ajouter = new System.Windows.Forms.Button();
+            this.notes_TB = new System.Windows.Forms.TextBox();
+            this.clear = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // de_contacteTB
+            // from_TB
             // 
-            this.de_contacteTB.Location = new System.Drawing.Point(157, 74);
-            this.de_contacteTB.Name = "de_contacteTB";
-            this.de_contacteTB.Size = new System.Drawing.Size(260, 20);
-            this.de_contacteTB.TabIndex = 24;
-            this.de_contacteTB.Leave += new System.EventHandler(this.outControl);
+            this.from_TB.Location = new System.Drawing.Point(157, 74);
+            this.from_TB.Name = "from_TB";
+            this.from_TB.Size = new System.Drawing.Size(260, 20);
+            this.from_TB.TabIndex = 24;
+            this.from_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label5
             // 
@@ -81,13 +81,13 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "A";
             // 
-            // a_contacteTB
+            // to_TB
             // 
-            this.a_contacteTB.Location = new System.Drawing.Point(157, 114);
-            this.a_contacteTB.Name = "a_contacteTB";
-            this.a_contacteTB.Size = new System.Drawing.Size(260, 20);
-            this.a_contacteTB.TabIndex = 28;
-            this.a_contacteTB.Leave += new System.EventHandler(this.outControl);
+            this.to_TB.Location = new System.Drawing.Point(157, 114);
+            this.to_TB.Name = "to_TB";
+            this.to_TB.Size = new System.Drawing.Size(260, 20);
+            this.to_TB.TabIndex = 28;
+            this.to_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label3
             // 
@@ -106,13 +106,13 @@
             this.dateDP.Size = new System.Drawing.Size(260, 20);
             this.dateDP.TabIndex = 30;
             // 
-            // objetTB
+            // subject_TB
             // 
-            this.objetTB.Location = new System.Drawing.Point(157, 194);
-            this.objetTB.Name = "objetTB";
-            this.objetTB.Size = new System.Drawing.Size(260, 20);
-            this.objetTB.TabIndex = 32;
-            this.objetTB.Leave += new System.EventHandler(this.outControl);
+            this.subject_TB.Location = new System.Drawing.Point(157, 194);
+            this.subject_TB.Name = "subject_TB";
+            this.subject_TB.Size = new System.Drawing.Size(260, 20);
+            this.subject_TB.TabIndex = 32;
+            this.subject_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label4
             // 
@@ -134,58 +134,59 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Notes";
             // 
-            // notesTB
+            // notes_TB
             // 
-            this.notesTB.Location = new System.Drawing.Point(157, 233);
-            this.notesTB.Multiline = true;
-            this.notesTB.Name = "notesTB";
-            this.notesTB.Size = new System.Drawing.Size(260, 153);
-            this.notesTB.TabIndex = 34;
+            this.notes_TB.Location = new System.Drawing.Point(157, 233);
+            this.notes_TB.Multiline = true;
+            this.notes_TB.Name = "notes_TB";
+            this.notes_TB.Size = new System.Drawing.Size(260, 153);
+            this.notes_TB.TabIndex = 34;
             // 
-            // effacer
+            // clear
             // 
-            this.effacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.effacer.Location = new System.Drawing.Point(157, 451);
-            this.effacer.Name = "effacer";
-            this.effacer.Size = new System.Drawing.Size(260, 31);
-            this.effacer.TabIndex = 70;
-            this.effacer.Text = "Effacer le formulaire";
-            this.effacer.UseVisualStyleBackColor = true;
-            this.effacer.Click += new System.EventHandler(this.clearContact);
+            this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Location = new System.Drawing.Point(157, 451);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(260, 31);
+            this.clear.TabIndex = 70;
+            this.clear.Text = "Effacer le formulaire";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clearPostIt);
             // 
-            // ajouter
+            // add
             // 
-            this.ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ajouter.Location = new System.Drawing.Point(157, 401);
-            this.ajouter.Name = "ajouter";
-            this.ajouter.Size = new System.Drawing.Size(260, 43);
-            this.ajouter.TabIndex = 69;
-            this.ajouter.Text = "Ajouter remarque";
-            this.ajouter.UseVisualStyleBackColor = true;
+            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Location = new System.Drawing.Point(157, 401);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(260, 43);
+            this.add.TabIndex = 69;
+            this.add.Text = "Ajouter remarque";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // addContactForm
+            // posteitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(518, 498);
-            this.Controls.Add(this.effacer);
-            this.Controls.Add(this.ajouter);
-            this.Controls.Add(this.notesTB);
+            this.Controls.Add(this.clear);
+            this.Controls.Add(this.add);
+            this.Controls.Add(this.notes_TB);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.objetTB);
+            this.Controls.Add(this.subject_TB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateDP);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.a_contacteTB);
+            this.Controls.Add(this.to_TB);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.de_contacteTB);
+            this.Controls.Add(this.from_TB);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "addContactForm";
+            this.Name = "posteitForm";
             this.Text = "Nouvelle remarque";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,18 +195,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox de_contacteTB;
+        private System.Windows.Forms.TextBox from_TB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox a_contacteTB;
+        private System.Windows.Forms.TextBox to_TB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateDP;
-        private System.Windows.Forms.TextBox objetTB;
+        private System.Windows.Forms.TextBox subject_TB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox notesTB;
-        private System.Windows.Forms.Button effacer;
-        private System.Windows.Forms.Button ajouter;
+        private System.Windows.Forms.TextBox notes_TB;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button add;
     }
 }

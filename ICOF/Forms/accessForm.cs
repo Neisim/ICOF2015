@@ -25,8 +25,6 @@ namespace ICOF
         private void outControl(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
-            ControlChecker check = new ControlChecker();
-            check.controlCheck(tb);
         }
 
         private void validateUser(object sender, EventArgs e)
@@ -36,8 +34,15 @@ namespace ICOF
             User u = new User(name, pwd);
             MessageBox.Show("User: " + name + " Password: " + pwd);
             Controller control = new Controller();
-            profile = control.userProfile(u);
-            this.Close();
+            profile = "sec";
+            //profile = "DEBUG";
+            if (profile.Equals("wrong_user"))
+                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrecte.", "Acces", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Profile actif: " + profile, "Acces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
     }
 }

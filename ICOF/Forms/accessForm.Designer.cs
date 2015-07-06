@@ -69,7 +69,7 @@
             // 
             // userTB
             // 
-            this.userTB.Location = new System.Drawing.Point(225, 66);
+            this.userTB.Location = new System.Drawing.Point(225, 68);
             this.userTB.Name = "userTB";
             this.userTB.Size = new System.Drawing.Size(260, 20);
             this.userTB.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // passwordTB
             // 
-            this.passwordTB.Location = new System.Drawing.Point(225, 106);
+            this.passwordTB.Location = new System.Drawing.Point(225, 108);
             this.passwordTB.Name = "passwordTB";
             this.passwordTB.Size = new System.Drawing.Size(260, 20);
             this.passwordTB.TabIndex = 4;
@@ -86,7 +86,7 @@
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(70, 199);
+            this.clear.Location = new System.Drawing.Point(68, 198);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(415, 31);
             this.clear.TabIndex = 19;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 240);
+            this.ClientSize = new System.Drawing.Size(556, 244);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.enter);
             this.Controls.Add(this.passwordTB);
