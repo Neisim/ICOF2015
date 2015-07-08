@@ -13,18 +13,25 @@ namespace ICOF.Forms
 {
     public partial class contactForm : Form
     {
-        private ContactCompany _contact;
+        private ContactCompany  _contact;
         private ControlModifier _checkInput;
-        private Boolean _wrongForm;
+        private Controller      _control;
+        private Company         _company;
+        private Boolean         _wrongForm;
 
         public contactForm()
         {
             InitializeComponent();
             _checkInput = new ControlModifier();
+            _contact = new ContactCompany();
+            _control = new Controller();
+            _company = new Company();
             _wrongForm = true;
         }
 
-        public void setContact(ContactCompany contactCompany) { _contact = contactCompany; }
+        public void setContact(ContactCompany contact) { _contact = contact; }
+
+        public void setCompany(Company company) { _company = company; }
 
         public void fillForm(){
             modify.Visible = true;
@@ -58,15 +65,23 @@ namespace ICOF.Forms
 
         private void add_Click(object sender, EventArgs e)
         {
-            if (_wrongForm) MessageBox.Show("Revisez vos champs", "Ajouter élève en stage", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (_wrongForm) MessageBox.Show("Revisez vos champs", "Ajouter contact", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                /*if (_control.insertPostIt(_postIt).Equals("OK"))
+                //DOES NOT WORK
+                _contact.setcontactFirstName(firstName_TB.Text);
+                _contact.setcontactLastName(lastName_TB.Text);
+                _contact.setPhone(phone_TB.Text);
+                _contact.setEmail(email_TB.Text);
+                _contact.setCompanyName(_company.getName());
+                _contact.setPost(post_TB.Text);
+
+                if (_control.insertContactCompany(_contact).Equals("OK"))
                 {
-                    MessageBox.Show("Remarque ajouté correctement", "Ajouter remarque", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Contact ajouté correctement", "Ajouter contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                else MessageBox.Show("Pas possible d'ajouter. Cette remarque existe dejà.", "Ajouter remarque", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+                else MessageBox.Show("Pas possible d'ajouter. Cette remarque existe dejà.", "Ajouter contact", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

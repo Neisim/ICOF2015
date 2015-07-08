@@ -55,8 +55,8 @@
             this.montant_prevLB = new System.Windows.Forms.Label();
             this.modify = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.data_TAB = new System.Windows.Forms.TabControl();
+            this.contacts = new System.Windows.Forms.TabPage();
             this.contactsResult = new System.Windows.Forms.Label();
             this.addContact = new System.Windows.Forms.Button();
             this.contactDGV = new System.Windows.Forms.DataGridView();
@@ -65,7 +65,7 @@
             this.direct_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.post = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.trainingStudents = new System.Windows.Forms.TabPage();
             this.studentsResult = new System.Windows.Forms.Label();
             this.addStudentTraining = new System.Windows.Forms.Button();
             this.studentsTrainingDGV = new System.Windows.Forms.DataGridView();
@@ -75,7 +75,7 @@
             this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacher_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teacher_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.postIt = new System.Windows.Forms.TabPage();
             this.postItResult = new System.Windows.Forms.Label();
             this.addPostIt = new System.Windows.Forms.Button();
             this.postItDGV = new System.Windows.Forms.DataGridView();
@@ -85,13 +85,14 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.modifyCompany = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
+            this.data_TAB.SuspendLayout();
+            this.contacts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.trainingStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.postIt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postItDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +123,7 @@
             this.companyName_TB.Name = "companyName_TB";
             this.companyName_TB.Size = new System.Drawing.Size(260, 20);
             this.companyName_TB.TabIndex = 1;
+            this.companyName_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // companyAddress_TB
             // 
@@ -130,6 +132,7 @@
             this.companyAddress_TB.Name = "companyAddress_TB";
             this.companyAddress_TB.Size = new System.Drawing.Size(260, 20);
             this.companyAddress_TB.TabIndex = 2;
+            this.companyAddress_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label2
             // 
@@ -148,6 +151,7 @@
             this.companyEmail_TB.Name = "companyEmail_TB";
             this.companyEmail_TB.Size = new System.Drawing.Size(260, 20);
             this.companyEmail_TB.TabIndex = 4;
+            this.companyEmail_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label3
             // 
@@ -166,6 +170,7 @@
             this.companyPhone_TB.Name = "companyPhone_TB";
             this.companyPhone_TB.Size = new System.Drawing.Size(260, 20);
             this.companyPhone_TB.TabIndex = 3;
+            this.companyPhone_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label4
             // 
@@ -184,6 +189,7 @@
             this.companyActivity_TB.Name = "companyActivity_TB";
             this.companyActivity_TB.Size = new System.Drawing.Size(260, 20);
             this.companyActivity_TB.TabIndex = 5;
+            this.companyActivity_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label6
             // 
@@ -259,6 +265,7 @@
             this.currentTA_TB.Name = "currentTA_TB";
             this.currentTA_TB.Size = new System.Drawing.Size(303, 20);
             this.currentTA_TB.TabIndex = 9;
+            this.currentTA_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // currentYear_TB
             // 
@@ -267,6 +274,7 @@
             this.currentYear_TB.Name = "currentYear_TB";
             this.currentYear_TB.Size = new System.Drawing.Size(303, 20);
             this.currentYear_TB.TabIndex = 10;
+            this.currentYear_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // anneeLB
             // 
@@ -294,6 +302,7 @@
             this.previousYear_TB.Name = "previousYear_TB";
             this.previousYear_TB.Size = new System.Drawing.Size(303, 20);
             this.previousYear_TB.TabIndex = 13;
+            this.previousYear_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // annee_prevLB
             // 
@@ -312,6 +321,7 @@
             this.previousTA_TB.Name = "previousTA_TB";
             this.previousTA_TB.Size = new System.Drawing.Size(303, 20);
             this.previousTA_TB.TabIndex = 11;
+            this.previousTA_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // montant_prevLB
             // 
@@ -343,29 +353,29 @@
             this.clear.Text = "Ajouter remarque";
             this.clear.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // data_TAB
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(69, 319);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(974, 225);
-            this.tabControl1.TabIndex = 82;
+            this.data_TAB.Controls.Add(this.contacts);
+            this.data_TAB.Controls.Add(this.trainingStudents);
+            this.data_TAB.Controls.Add(this.postIt);
+            this.data_TAB.Location = new System.Drawing.Point(69, 319);
+            this.data_TAB.Name = "data_TAB";
+            this.data_TAB.SelectedIndex = 0;
+            this.data_TAB.Size = new System.Drawing.Size(974, 225);
+            this.data_TAB.TabIndex = 82;
             // 
-            // tabPage1
+            // contacts
             // 
-            this.tabPage1.Controls.Add(this.contactsResult);
-            this.tabPage1.Controls.Add(this.addContact);
-            this.tabPage1.Controls.Add(this.contactDGV);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(966, 199);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Contacts";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.contacts.Controls.Add(this.contactsResult);
+            this.contacts.Controls.Add(this.addContact);
+            this.contacts.Controls.Add(this.contactDGV);
+            this.contacts.Location = new System.Drawing.Point(4, 22);
+            this.contacts.Name = "contacts";
+            this.contacts.Padding = new System.Windows.Forms.Padding(3);
+            this.contacts.Size = new System.Drawing.Size(966, 199);
+            this.contacts.TabIndex = 0;
+            this.contacts.Text = "Contacts";
+            this.contacts.UseVisualStyleBackColor = true;
             // 
             // contactsResult
             // 
@@ -381,7 +391,7 @@
             // 
             // addContact
             // 
-            this.addContact.BackColor = System.Drawing.SystemColors.Control;
+            this.addContact.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.addContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.addContact.Location = new System.Drawing.Point(0, 162);
             this.addContact.Name = "addContact";
@@ -389,6 +399,7 @@
             this.addContact.TabIndex = 77;
             this.addContact.Text = "Ajouter contact";
             this.addContact.UseVisualStyleBackColor = false;
+            this.addContact.Visible = false;
             this.addContact.Click += new System.EventHandler(this.addContact_Click);
             // 
             // contactDGV
@@ -450,18 +461,18 @@
             this.post.Name = "post";
             this.post.ReadOnly = true;
             // 
-            // tabPage2
+            // trainingStudents
             // 
-            this.tabPage2.Controls.Add(this.studentsResult);
-            this.tabPage2.Controls.Add(this.addStudentTraining);
-            this.tabPage2.Controls.Add(this.studentsTrainingDGV);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(966, 199);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Élèves en satge";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.trainingStudents.Controls.Add(this.studentsResult);
+            this.trainingStudents.Controls.Add(this.addStudentTraining);
+            this.trainingStudents.Controls.Add(this.studentsTrainingDGV);
+            this.trainingStudents.Location = new System.Drawing.Point(4, 22);
+            this.trainingStudents.Name = "trainingStudents";
+            this.trainingStudents.Padding = new System.Windows.Forms.Padding(3);
+            this.trainingStudents.Size = new System.Drawing.Size(966, 199);
+            this.trainingStudents.TabIndex = 1;
+            this.trainingStudents.Text = "Élèves en satge";
+            this.trainingStudents.UseVisualStyleBackColor = true;
             // 
             // studentsResult
             // 
@@ -484,6 +495,7 @@
             this.addStudentTraining.TabIndex = 78;
             this.addStudentTraining.Text = "Ajouter élève en stage";
             this.addStudentTraining.UseVisualStyleBackColor = true;
+            this.addStudentTraining.Visible = false;
             this.addStudentTraining.Click += new System.EventHandler(this.addStudentTraining_Click);
             // 
             // studentsTrainingDGV
@@ -553,17 +565,17 @@
             this.teacher_firstname.Name = "teacher_firstname";
             this.teacher_firstname.ReadOnly = true;
             // 
-            // tabPage3
+            // postIt
             // 
-            this.tabPage3.Controls.Add(this.postItResult);
-            this.tabPage3.Controls.Add(this.addPostIt);
-            this.tabPage3.Controls.Add(this.postItDGV);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(966, 199);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Remarques";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.postIt.Controls.Add(this.postItResult);
+            this.postIt.Controls.Add(this.addPostIt);
+            this.postIt.Controls.Add(this.postItDGV);
+            this.postIt.Location = new System.Drawing.Point(4, 22);
+            this.postIt.Name = "postIt";
+            this.postIt.Size = new System.Drawing.Size(966, 199);
+            this.postIt.TabIndex = 2;
+            this.postIt.Text = "Remarques";
+            this.postIt.UseVisualStyleBackColor = true;
             // 
             // postItResult
             // 
@@ -586,6 +598,7 @@
             this.addPostIt.TabIndex = 79;
             this.addPostIt.Text = "Ajouter remarque";
             this.addPostIt.UseVisualStyleBackColor = true;
+            this.addPostIt.Visible = false;
             this.addPostIt.Click += new System.EventHandler(this.addPostIt_Click);
             // 
             // postItDGV
@@ -649,30 +662,44 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(69, 625);
+            this.button2.Location = new System.Drawing.Point(69, 622);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(974, 31);
             this.button2.TabIndex = 85;
             this.button2.Text = "Effacer le formulaire";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // add
+            // modifyCompany
             // 
-            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(69, 575);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(974, 43);
-            this.add.TabIndex = 84;
-            this.add.Text = "Modifier entreprise";
-            this.add.UseVisualStyleBackColor = true;
+            this.modifyCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyCompany.Location = new System.Drawing.Point(69, 572);
+            this.modifyCompany.Name = "modifyCompany";
+            this.modifyCompany.Size = new System.Drawing.Size(974, 43);
+            this.modifyCompany.TabIndex = 84;
+            this.modifyCompany.Text = "Modifier entreprise";
+            this.modifyCompany.UseVisualStyleBackColor = true;
+            this.modifyCompany.Click += new System.EventHandler(this.modifyCompany_Click);
+            // 
+            // confirm
+            // 
+            this.confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm.Location = new System.Drawing.Point(69, 572);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(974, 43);
+            this.confirm.TabIndex = 86;
+            this.confirm.Text = "Confirmer modifications";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Visible = false;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
             // companyFoundForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1112, 682);
+            this.ClientSize = new System.Drawing.Size(1112, 677);
+            this.Controls.Add(this.confirm);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.add);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.modifyCompany);
+            this.Controls.Add(this.data_TAB);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.modify);
             this.Controls.Add(this.previousYear_TB);
@@ -707,15 +734,16 @@
             this.Name = "companyFoundForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultat de recherche";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.Leave += new System.EventHandler(this.outControl);
+            this.data_TAB.ResumeLayout(false);
+            this.contacts.ResumeLayout(false);
+            this.contacts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.trainingStudents.ResumeLayout(false);
+            this.trainingStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentsTrainingDGV)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.postIt.ResumeLayout(false);
+            this.postIt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postItDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -751,8 +779,8 @@
         private System.Windows.Forms.Label montant_prevLB;
         private System.Windows.Forms.Button modify;
         private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl data_TAB;
+        private System.Windows.Forms.TabPage contacts;
         private System.Windows.Forms.Button addContact;
         private System.Windows.Forms.DataGridView contactDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn contact_lastname;
@@ -760,7 +788,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direct_phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn post;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage trainingStudents;
         private System.Windows.Forms.DataGridView studentsTrainingDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn student_firstname;
@@ -770,8 +798,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
         private System.Windows.Forms.Button addStudentTraining;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button modifyCompany;
+        private System.Windows.Forms.TabPage postIt;
         private System.Windows.Forms.Button addPostIt;
         private System.Windows.Forms.DataGridView postItDGV;
         private System.Windows.Forms.Label contactsResult;
@@ -782,5 +810,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button confirm;
     }
 }

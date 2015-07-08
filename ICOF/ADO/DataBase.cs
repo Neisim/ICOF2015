@@ -10,15 +10,14 @@ namespace ICOF
 {
     public class DataBase
     {
-        //private static String connectionStr = "Server=localhost;Database=icof;Uid=root;Pwd=;";
         private static String connectionStr = "Server=localhost;Database=icof;Uid=root;Pwd=;";
+        //private static String connectionStr = "Server=mysql55-4.pro;Database=icofcampanc;Uid=icofcampanc;Pwd=Nassim69;";
         private MySqlConnection connection;
 
         public DataBase()
         {
             try
             {
-
                 connection = new MySqlConnection();
                 connection.ConnectionString = connectionStr;
                 connection.Open();

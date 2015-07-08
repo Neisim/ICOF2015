@@ -14,7 +14,9 @@ namespace ICOF.Entities
         private String  _phone;      
         private String  _email;
         private String  _post;
-       
+
+        public ContactCompany() { }
+
         public ContactCompany(String companyName, String contactFirstName, String contactLastName, String phone, String email, String post) {
             _companyName = companyName;
             _contactFirstName = contactFirstName;

@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.teacherFirstname_TB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.modify = new System.Windows.Forms.Button();
+            this.modifyStudent = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -198,17 +198,17 @@
             this.label8.TabIndex = 89;
             this.label8.Text = "Prénom maitre d\'apprentissage";
             // 
-            // modify
+            // modifyStudent
             // 
-            this.modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modify.Location = new System.Drawing.Point(68, 340);
-            this.modify.Name = "modify";
-            this.modify.Size = new System.Drawing.Size(523, 43);
-            this.modify.TabIndex = 91;
-            this.modify.Text = "Modifier élève en stage";
-            this.modify.UseVisualStyleBackColor = true;
-            this.modify.Visible = false;
-            this.modify.Click += new System.EventHandler(this.modify_Click);
+            this.modifyStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyStudent.Location = new System.Drawing.Point(68, 340);
+            this.modifyStudent.Name = "modifyStudent";
+            this.modifyStudent.Size = new System.Drawing.Size(523, 43);
+            this.modifyStudent.TabIndex = 91;
+            this.modifyStudent.Text = "Modifier élève en stage";
+            this.modifyStudent.UseVisualStyleBackColor = true;
+            this.modifyStudent.Visible = false;
+            this.modifyStudent.Click += new System.EventHandler(this.modify_Click);
             // 
             // confirm
             // 
@@ -228,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 445);
             this.Controls.Add(this.confirm);
-            this.Controls.Add(this.modify);
+            this.Controls.Add(this.modifyStudent);
             this.Controls.Add(this.teacherFirstname_TB);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.teacherLastname_TB);
@@ -274,7 +274,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox teacherFirstname_TB;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button modify;
+        private System.Windows.Forms.Button modifyStudent;
         private System.Windows.Forms.Button confirm;
     }
 }

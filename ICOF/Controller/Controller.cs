@@ -29,7 +29,7 @@ namespace ICOF
         public String insertTrainingStudent(TrainingStudent training_student)   { return insert.insertTrainingStudent(training_student); }
         
         //SELECT
-        public String userProfile(User u)                           { return select.selectUserProfile(u); }
+        public String    getUserProfile(User u)                     { return select.selectUserProfile(u); }
         public DataTable getContacts(Company company)               { return select.selectContactCompany(company); }
         public DataTable getTrainingStudents(Company company)       { return select.selectTrainigStudent(company); }
         public DataTable getPostIt(Company company)                 { return select.selectPostIt(company); }
