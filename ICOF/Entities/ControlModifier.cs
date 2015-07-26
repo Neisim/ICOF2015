@@ -12,14 +12,14 @@ namespace ICOF.Entities
     {
         public ControlModifier() { }
 
-        public void setCorrectColor(TextBox control)
+        public void setCorrectColor(Control control)
         {
             control.BackColor = Color.White;
             control.ForeColor = Color.Black;
 
         }
 
-        public void setWrongColor(TextBox control)
+        public void setWrongColor(Control control)
         {
             control.BackColor = Color.Red;
             control.ForeColor = Color.White;

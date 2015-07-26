@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personForm));
             this.person_LB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +39,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.personFirstname_TB = new System.Windows.Forms.TextBox();
-            this.personLastname_TB = new System.Windows.Forms.TextBox();
-            this.personPhone_TB = new System.Windows.Forms.TextBox();
+            this.firstName_TB = new System.Windows.Forms.TextBox();
+            this.lastName_TB = new System.Windows.Forms.TextBox();
+            this.phone_TB = new System.Windows.Forms.TextBox();
             this.mmemr_CB = new System.Windows.Forms.ComboBox();
-            this.personEmail_TB = new System.Windows.Forms.TextBox();
+            this.email_TB = new System.Windows.Forms.TextBox();
             this.postICOF_CB = new System.Windows.Forms.ComboBox();
             this.companyPost_TB = new System.Windows.Forms.TextBox();
             this.companyName_TB = new System.Windows.Forms.TextBox();
@@ -57,6 +58,9 @@
             this.clear = new System.Windows.Forms.Button();
             this.diploma_CB = new System.Windows.Forms.ComboBox();
             this.diplomeLB = new System.Windows.Forms.Label();
+            this.modify = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
+            this.deletePerson = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // person_LB
@@ -159,29 +163,29 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Poste a l\'ICOF";
             // 
-            // personFirstname_TB
+            // firstName_TB
             // 
-            this.personFirstname_TB.Location = new System.Drawing.Point(192, 154);
-            this.personFirstname_TB.Name = "personFirstname_TB";
-            this.personFirstname_TB.Size = new System.Drawing.Size(260, 20);
-            this.personFirstname_TB.TabIndex = 1;
-            this.personFirstname_TB.Leave += new System.EventHandler(this.outControl);
+            this.firstName_TB.Location = new System.Drawing.Point(192, 154);
+            this.firstName_TB.Name = "firstName_TB";
+            this.firstName_TB.Size = new System.Drawing.Size(260, 20);
+            this.firstName_TB.TabIndex = 1;
+            this.firstName_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // personLastname_TB
+            // lastName_TB
             // 
-            this.personLastname_TB.Location = new System.Drawing.Point(192, 114);
-            this.personLastname_TB.Name = "personLastname_TB";
-            this.personLastname_TB.Size = new System.Drawing.Size(260, 20);
-            this.personLastname_TB.TabIndex = 0;
-            this.personLastname_TB.Leave += new System.EventHandler(this.outControl);
+            this.lastName_TB.Location = new System.Drawing.Point(192, 114);
+            this.lastName_TB.Name = "lastName_TB";
+            this.lastName_TB.Size = new System.Drawing.Size(260, 20);
+            this.lastName_TB.TabIndex = 0;
+            this.lastName_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // personPhone_TB
+            // phone_TB
             // 
-            this.personPhone_TB.Location = new System.Drawing.Point(192, 194);
-            this.personPhone_TB.Name = "personPhone_TB";
-            this.personPhone_TB.Size = new System.Drawing.Size(260, 20);
-            this.personPhone_TB.TabIndex = 2;
-            this.personPhone_TB.Leave += new System.EventHandler(this.outControl);
+            this.phone_TB.Location = new System.Drawing.Point(192, 194);
+            this.phone_TB.Name = "phone_TB";
+            this.phone_TB.Size = new System.Drawing.Size(260, 20);
+            this.phone_TB.TabIndex = 2;
+            this.phone_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // mmemr_CB
             // 
@@ -191,13 +195,13 @@
             this.mmemr_CB.Size = new System.Drawing.Size(260, 21);
             this.mmemr_CB.TabIndex = 18;
             // 
-            // personEmail_TB
+            // email_TB
             // 
-            this.personEmail_TB.Location = new System.Drawing.Point(192, 234);
-            this.personEmail_TB.Name = "personEmail_TB";
-            this.personEmail_TB.Size = new System.Drawing.Size(260, 20);
-            this.personEmail_TB.TabIndex = 3;
-            this.personEmail_TB.Leave += new System.EventHandler(this.outControl);
+            this.email_TB.Location = new System.Drawing.Point(192, 234);
+            this.email_TB.Name = "email_TB";
+            this.email_TB.Size = new System.Drawing.Size(260, 20);
+            this.email_TB.TabIndex = 3;
+            this.email_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // postICOF_CB
             // 
@@ -228,6 +232,7 @@
             this.birthdate_TB.Name = "birthdate_TB";
             this.birthdate_TB.Size = new System.Drawing.Size(260, 20);
             this.birthdate_TB.TabIndex = 12;
+            this.birthdate_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // formationLB
             // 
@@ -323,11 +328,52 @@
             this.diplomeLB.TabIndex = 21;
             this.diplomeLB.Text = "Obtention du diplome";
             // 
+            // modify
+            // 
+            this.modify.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modify.Location = new System.Drawing.Point(68, 365);
+            this.modify.Name = "modify";
+            this.modify.Size = new System.Drawing.Size(887, 43);
+            this.modify.TabIndex = 22;
+            this.modify.Text = "Modifier personne";
+            this.modify.UseVisualStyleBackColor = true;
+            this.modify.Visible = false;
+            this.modify.Click += new System.EventHandler(this.modifyPerson_Click);
+            // 
+            // confirm
+            // 
+            this.confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm.Location = new System.Drawing.Point(68, 365);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(887, 43);
+            this.confirm.TabIndex = 23;
+            this.confirm.Text = "Confirmer modifications";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Visible = false;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            // 
+            // deletePerson
+            // 
+            this.deletePerson.BackColor = System.Drawing.Color.Brown;
+            this.deletePerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePerson.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deletePerson.Location = new System.Drawing.Point(67, 454);
+            this.deletePerson.Name = "deletePerson";
+            this.deletePerson.Size = new System.Drawing.Size(888, 31);
+            this.deletePerson.TabIndex = 106;
+            this.deletePerson.Text = "Suprimer personne";
+            this.deletePerson.UseVisualStyleBackColor = false;
+            this.deletePerson.Visible = false;
+            this.deletePerson.Click += new System.EventHandler(this.deletePerson_Click);
+            // 
             // personForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 473);
+            this.ClientSize = new System.Drawing.Size(1020, 514);
+            this.Controls.Add(this.deletePerson);
+            this.Controls.Add(this.confirm);
+            this.Controls.Add(this.modify);
             this.Controls.Add(this.diploma_CB);
             this.Controls.Add(this.diplomeLB);
             this.Controls.Add(this.clear);
@@ -342,11 +388,11 @@
             this.Controls.Add(this.companyName_TB);
             this.Controls.Add(this.companyPost_TB);
             this.Controls.Add(this.postICOF_CB);
-            this.Controls.Add(this.personEmail_TB);
+            this.Controls.Add(this.email_TB);
             this.Controls.Add(this.mmemr_CB);
-            this.Controls.Add(this.personPhone_TB);
-            this.Controls.Add(this.personLastname_TB);
-            this.Controls.Add(this.personFirstname_TB);
+            this.Controls.Add(this.phone_TB);
+            this.Controls.Add(this.lastName_TB);
+            this.Controls.Add(this.firstName_TB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -358,10 +404,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.person_LB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "personForm";
             this.Text = "Nouvelle personne";
+            this.Leave += new System.EventHandler(this.outControl);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,11 +427,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox personFirstname_TB;
-        private System.Windows.Forms.TextBox personLastname_TB;
-        private System.Windows.Forms.TextBox personPhone_TB;
+        private System.Windows.Forms.TextBox firstName_TB;
+        private System.Windows.Forms.TextBox lastName_TB;
+        private System.Windows.Forms.TextBox phone_TB;
         private System.Windows.Forms.ComboBox mmemr_CB;
-        private System.Windows.Forms.TextBox personEmail_TB;
+        private System.Windows.Forms.TextBox email_TB;
         private System.Windows.Forms.ComboBox postICOF_CB;
         private System.Windows.Forms.TextBox companyPost_TB;
         private System.Windows.Forms.TextBox companyName_TB;
@@ -398,5 +446,8 @@
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.ComboBox diploma_CB;
         private System.Windows.Forms.Label diplomeLB;
+        private System.Windows.Forms.Button modify;
+        private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Button deletePerson;
     }
 }

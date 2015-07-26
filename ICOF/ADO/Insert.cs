@@ -16,6 +16,7 @@ namespace ICOF.ADO
 
         public Insert() { }
 
+        //WORKS
         public String insertCompany(Company company)
         {
             //INSERT COMPANY
@@ -23,17 +24,18 @@ namespace ICOF.ADO
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            String queryResult = "insert_error";
-            String sqlQuery = "INSERT INTO person VALUES (0, @company_name, @address, @phone, @email, @fax, @activity, @payed_TA, @current_year, @current_TA, @previous_year, @previous_TA);";
+            String queryResult = "OK";
+            String sqlQuery = "INSERT INTO company VALUES (0, @company_name, @address, @phone, @email, @fax, @activity, @payed_TA, @current_year, @current_TA, @previous_year, @previous_TA);";
             MySqlCommand SqlCommand = new MySqlCommand(sqlQuery, connection);
-
+            String payed_TA = "Non";
+            if (company.getTaxe()) payed_TA = "Oui";
             SqlCommand.Parameters.AddWithValue("@company_name",     company.getName());
             SqlCommand.Parameters.AddWithValue("@address",          company.getAddress());
             SqlCommand.Parameters.AddWithValue("@phone",            company.getPhone());
             SqlCommand.Parameters.AddWithValue("@email",            company.getEmail());
             SqlCommand.Parameters.AddWithValue("@fax",              company.getFAX());
             SqlCommand.Parameters.AddWithValue("@activity",         company.getActivity());
-            SqlCommand.Parameters.AddWithValue("@payed_TA",         company.getTaxe());
+            SqlCommand.Parameters.AddWithValue("@payed_TA",         payed_TA);
             SqlCommand.Parameters.AddWithValue("@current_year",     company.getCurrentYear());
             SqlCommand.Parameters.AddWithValue("@current_TA",       company.getCurrentTA());
             SqlCommand.Parameters.AddWithValue("@previous_year",    company.getPreviousYear());
@@ -46,7 +48,8 @@ namespace ICOF.ADO
 
             catch (Exception e)
             {
-                MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                //MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                queryResult = e.Message;
             }
 
             finally
@@ -56,6 +59,7 @@ namespace ICOF.ADO
             return queryResult;
         }
 
+        //NOT WORKS FINE
         public String insertPerson(Person p)
         {
             //INSERT PERSON
@@ -63,7 +67,7 @@ namespace ICOF.ADO
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            String queryResult = "insert_error";
+            String queryResult = "OK";
             String sqlQuery = "INSERT INTO person VALUES (0, @mrmm, @firstname, @lastname, @phone, @email, @icof_p, @company_name, @company_post, @birthdate, @course_done, @year_in, @year_out, @diploma);";
             MySqlCommand SqlCommand = new MySqlCommand(sqlQuery, connection);
 
@@ -87,7 +91,8 @@ namespace ICOF.ADO
 
             catch (Exception e)
             {
-                MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                //MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                queryResult = e.Message;
             }
 
             finally
@@ -97,6 +102,7 @@ namespace ICOF.ADO
             return queryResult;
         }
 
+        //WORKS
         public String insertPostIt(PostIt postIt)
         {
             //INSERT POSTIT
@@ -104,16 +110,17 @@ namespace ICOF.ADO
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            String queryResult = "insert_error";
-            String sqlQuery = "INSERT INTO post_it VALUES (0, @to_name, @from_name, @date, @subject, @phone, @notes);";
+            String queryResult = "OK";
+            String sqlQuery = "INSERT INTO post_it VALUES (0, @to_name, @from_name, @date, @subject, @notes, @phone);";
             MySqlCommand SqlCommand = new MySqlCommand(sqlQuery, connection);
 
             SqlCommand.Parameters.AddWithValue("@to_name",      postIt.getToName());
             SqlCommand.Parameters.AddWithValue("@from_name",    postIt.getFromName());
             SqlCommand.Parameters.AddWithValue("@date",         postIt.getPostItDate());
             SqlCommand.Parameters.AddWithValue("@subject",      postIt.getSubject());
-            SqlCommand.Parameters.AddWithValue("@phone",        postIt.getPhone());
             SqlCommand.Parameters.AddWithValue("@notes",        postIt.getNotes());
+            SqlCommand.Parameters.AddWithValue("@phone", postIt.getPhone());
+            
             try
             {
                 if (SqlCommand.ExecuteNonQuery() == 1) queryResult = "OK";
@@ -121,7 +128,7 @@ namespace ICOF.ADO
 
             catch (Exception e)
             {
-                MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                queryResult = e.Message;
             }
 
             finally
@@ -131,6 +138,7 @@ namespace ICOF.ADO
             return queryResult;
         }
 
+        //WORKS
         public String insertContactCompany(ContactCompany contact)
         {
             //INSERT CONTACT COMPANY
@@ -138,13 +146,13 @@ namespace ICOF.ADO
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            String queryResult = "insert_error";
+            String queryResult = "OK";
             String sqlQuery = "INSERT INTO company_contact VALUES (0, @company_name, @contact_firstname, @contact_lastname, @direct_phone, @email, @post);";
             MySqlCommand SqlCommand = new MySqlCommand(sqlQuery, connection);
 
             SqlCommand.Parameters.AddWithValue("@company_name",         contact.getCompanyName());
-            SqlCommand.Parameters.AddWithValue("@contact_firstname",    contact.getcontactFirstName());
-            SqlCommand.Parameters.AddWithValue("@contact_lastname",     contact.getcontactLastName());
+            SqlCommand.Parameters.AddWithValue("@contact_firstname",    contact.getFirstName());
+            SqlCommand.Parameters.AddWithValue("@contact_lastname",     contact.getLastName());
             SqlCommand.Parameters.AddWithValue("@direct_phone",         contact.getPhone());
             SqlCommand.Parameters.AddWithValue("@email",                contact.getEmail());
             SqlCommand.Parameters.AddWithValue("@post",                 contact.getPost());
@@ -155,7 +163,8 @@ namespace ICOF.ADO
 
             catch (Exception e)
             {
-                MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                //MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                queryResult = e.Message;
             }
 
             finally
@@ -165,6 +174,7 @@ namespace ICOF.ADO
             return queryResult;
         }
 
+        //WORKS
         public String insertTrainingStudent(TrainingStudent student)
         {
             //INSERT TRAINING STUDENT
@@ -172,7 +182,7 @@ namespace ICOF.ADO
             connection = new MySqlConnection();
             connection = dataBase.getConnection();
 
-            String queryResult = "insert_error";
+            String queryResult = "OK";
             String sqlQuery = "INSERT INTO students_training VALUES (0, @firstname, @lastname, @company_name, @job_year, @course_name, @teacher_firstName, @teacher_lastName);";
             MySqlCommand SqlCommand = new MySqlCommand(sqlQuery, connection);
 
@@ -191,7 +201,8 @@ namespace ICOF.ADO
 
             catch (Exception e)
             {
-                MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                //MessageBox.Show("Erreur avec la Base de Donées. Contactez votre administrateur de systèmes " + e.Message);
+                queryResult = e.Message;
             }
 
             finally

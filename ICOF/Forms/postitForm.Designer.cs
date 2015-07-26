@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(postItForm));
             this.from_TB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.postIt_LB = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.to_TB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +42,9 @@
             this.notes_TB = new System.Windows.Forms.TextBox();
             this.clear = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
+            this.modifyPostIt = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
+            this.deletePostIt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // from_TB
@@ -61,15 +65,15 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "De";
             // 
-            // label1
+            // postIt_LB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 31);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Nouvelle remarque";
+            this.postIt_LB.AutoSize = true;
+            this.postIt_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postIt_LB.Location = new System.Drawing.Point(62, 18);
+            this.postIt_LB.Name = "postIt_LB";
+            this.postIt_LB.Size = new System.Drawing.Size(242, 31);
+            this.postIt_LB.TabIndex = 25;
+            this.postIt_LB.Text = "Nouvelle remarque";
             // 
             // label2
             // 
@@ -164,12 +168,52 @@
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // posteitForm
+            // modifyPostIt
+            // 
+            this.modifyPostIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyPostIt.Location = new System.Drawing.Point(157, 401);
+            this.modifyPostIt.Name = "modifyPostIt";
+            this.modifyPostIt.Size = new System.Drawing.Size(260, 43);
+            this.modifyPostIt.TabIndex = 71;
+            this.modifyPostIt.Text = "Modifier données";
+            this.modifyPostIt.UseVisualStyleBackColor = true;
+            this.modifyPostIt.Visible = false;
+            this.modifyPostIt.Click += new System.EventHandler(this.modifyPostIt_Click);
+            // 
+            // confirm
+            // 
+            this.confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm.Location = new System.Drawing.Point(157, 401);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(260, 43);
+            this.confirm.TabIndex = 72;
+            this.confirm.Text = "Confirmer données";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Visible = false;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            // 
+            // deletePostIt
+            // 
+            this.deletePostIt.BackColor = System.Drawing.Color.Brown;
+            this.deletePostIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePostIt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deletePostIt.Location = new System.Drawing.Point(157, 491);
+            this.deletePostIt.Name = "deletePostIt";
+            this.deletePostIt.Size = new System.Drawing.Size(260, 31);
+            this.deletePostIt.TabIndex = 106;
+            this.deletePostIt.Text = "Suprimer remarque";
+            this.deletePostIt.UseVisualStyleBackColor = false;
+            this.deletePostIt.Click += new System.EventHandler(this.deletePostIt_Click);
+            // 
+            // postItForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(518, 498);
+            this.ClientSize = new System.Drawing.Size(518, 545);
+            this.Controls.Add(this.deletePostIt);
+            this.Controls.Add(this.confirm);
+            this.Controls.Add(this.modifyPostIt);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.add);
             this.Controls.Add(this.notes_TB);
@@ -182,11 +226,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.from_TB);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.postIt_LB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "posteitForm";
+            this.Name = "postItForm";
             this.Text = "Nouvelle remarque";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,7 +242,7 @@
 
         private System.Windows.Forms.TextBox from_TB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label postIt_LB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox to_TB;
         private System.Windows.Forms.Label label3;
@@ -208,5 +253,8 @@
         private System.Windows.Forms.TextBox notes_TB;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button add;
+        private System.Windows.Forms.Button modifyPostIt;
+        private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Button deletePostIt;
     }
 }

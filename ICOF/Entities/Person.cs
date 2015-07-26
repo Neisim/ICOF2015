@@ -8,6 +8,7 @@ namespace ICOF.Entities
 {
     public class Person
     {
+        private int         _ID;
         private String      _mmemr;
         private String      _firstName;
         private String      _lastName;
@@ -24,8 +25,9 @@ namespace ICOF.Entities
 
         public Person() { }
 
-        public Person(String mmemr, String firstName, String lastName, String phone, String email, String icofPost, String companyName, String companyPost, String birthDate, String courseDone, String yearIn, String yearOut, String diploma)
+        public Person(int ID, String mmemr, String firstName, String lastName, String phone, String email, String icofPost, String companyName, String companyPost, String birthDate, String courseDone, String yearIn, String yearOut, String diploma)
         {
+            _ID = ID;
             _mmemr = mmemr;
             _firstName = firstName;
             _lastName = lastName;
@@ -42,6 +44,7 @@ namespace ICOF.Entities
         }
 
         //GETTERS
+        public int getID()              { return _ID; }
         public String getMmeMr()        { return _mmemr; }
         public String getFirstName()    { return _firstName; }
         public String getLastName()     { return _lastName; }
@@ -58,6 +61,7 @@ namespace ICOF.Entities
 
 
         //SETTERS
+        public void setID(int ID)                           { _ID = ID; }
         public void setMmeMR(String mmemr)                  { _mmemr = mmemr; }
         public void setFirstName(String firstName)          { _firstName = firstName; }
         public void setLastName(String lastName)            { _lastName = lastName; }

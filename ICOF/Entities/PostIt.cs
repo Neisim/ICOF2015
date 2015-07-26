@@ -8,14 +8,29 @@ namespace ICOF.Entities
 {
     public class PostIt
     {
-        private String _toName;
-        private String _fromName;
-        private String _postItDate;
-        private String _subject;
-        private String _notes;
-        private String _phone;
+        private int     _ID;
+        private String  _toName;
+        private String  _fromName;
+        private String  _postItDate;
+        private String  _subject;
+        private String  _notes;
+        private String  _phone;
+
+        public PostIt() { }
+
+        public PostIt(int ID, String toName, String fromName, String postItDate, String subject, String notes, String phone)
+        {
+            _ID = ID;
+            _toName = toName;
+            _fromName = fromName;
+            _postItDate = postItDate;
+            _subject = subject;
+            _notes = notes;
+            _phone = phone;
+        }
 
         //GETTERS
+        public int getID()              { return _ID; }
         public String getToName()       { return _toName; }
         public String getFromName()     { return _fromName; }
         public String getPostItDate()   { return _postItDate; }
@@ -24,6 +39,7 @@ namespace ICOF.Entities
         public String getPhone()        { return _phone; }
 
         //SETTERS
+        public void setID(int ID)                       { _ID = ID; }
         public void setToName(String toName)            { _toName = toName; }
         public void setFromName(String fromName)        { _fromName = fromName; }
         public void setPostItDate(String postItDate)    { _postItDate = postItDate; }

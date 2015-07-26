@@ -28,31 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(companyFoundForm));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.companyName_TB = new System.Windows.Forms.TextBox();
             this.companyAddress_TB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.companyEmail_TB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.email_TB = new System.Windows.Forms.TextBox();
+            this.email_LB = new System.Windows.Forms.Label();
             this.companyPhone_TB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.companyActivity_TB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.phone = new System.Windows.Forms.Label();
+            this.activity_TB = new System.Windows.Forms.TextBox();
+            this.activity_LB = new System.Windows.Forms.Label();
+            this.taxe_LB = new System.Windows.Forms.Label();
             this.fax_TB = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.fax_LB = new System.Windows.Forms.Label();
             this.taxe_CB = new System.Windows.Forms.ComboBox();
-            this.montantLB = new System.Windows.Forms.Label();
+            this.currentTA_LB = new System.Windows.Forms.Label();
             this.currentTA_TB = new System.Windows.Forms.TextBox();
             this.currentYear_TB = new System.Windows.Forms.TextBox();
-            this.anneeLB = new System.Windows.Forms.Label();
-            this.training_CB = new System.Windows.Forms.ComboBox();
+            this.currentYear_LB = new System.Windows.Forms.Label();
             this.previousYear_TB = new System.Windows.Forms.TextBox();
-            this.annee_prevLB = new System.Windows.Forms.Label();
+            this.previousYear_LB = new System.Windows.Forms.Label();
             this.previousTA_TB = new System.Windows.Forms.TextBox();
-            this.montant_prevLB = new System.Windows.Forms.Label();
+            this.previousTA_LB = new System.Windows.Forms.Label();
             this.modify = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.data_TAB = new System.Windows.Forms.TabControl();
@@ -61,6 +60,7 @@
             this.addContact = new System.Windows.Forms.Button();
             this.contactDGV = new System.Windows.Forms.DataGridView();
             this.contact_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contact_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direct_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +70,7 @@
             this.addStudentTraining = new System.Windows.Forms.Button();
             this.studentsTrainingDGV = new System.Windows.Forms.DataGridView();
             this.student_lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.student_firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.job_year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.course_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,14 +80,16 @@
             this.postItResult = new System.Windows.Forms.Label();
             this.addPostIt = new System.Windows.Forms.Button();
             this.postItDGV = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
+            this.post_it_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.to_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.from_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearForm = new System.Windows.Forms.Button();
             this.modifyCompany = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
+            this.deleteCompany = new System.Windows.Forms.Button();
             this.data_TAB.SuspendLayout();
             this.contacts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contactDGV)).BeginInit();
@@ -144,24 +147,24 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Adresse";
             // 
-            // companyEmail_TB
+            // email_TB
             // 
-            this.companyEmail_TB.Enabled = false;
-            this.companyEmail_TB.Location = new System.Drawing.Point(243, 194);
-            this.companyEmail_TB.Name = "companyEmail_TB";
-            this.companyEmail_TB.Size = new System.Drawing.Size(260, 20);
-            this.companyEmail_TB.TabIndex = 4;
-            this.companyEmail_TB.Leave += new System.EventHandler(this.outControl);
+            this.email_TB.Enabled = false;
+            this.email_TB.Location = new System.Drawing.Point(243, 194);
+            this.email_TB.Name = "email_TB";
+            this.email_TB.Size = new System.Drawing.Size(260, 20);
+            this.email_TB.TabIndex = 4;
+            this.email_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // label3
+            // email_LB
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Email entreprise";
+            this.email_LB.AutoSize = true;
+            this.email_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_LB.Location = new System.Drawing.Point(65, 194);
+            this.email_LB.Name = "email_LB";
+            this.email_LB.Size = new System.Drawing.Size(123, 20);
+            this.email_LB.TabIndex = 47;
+            this.email_LB.Text = "Email entreprise";
             // 
             // companyPhone_TB
             // 
@@ -172,72 +175,62 @@
             this.companyPhone_TB.TabIndex = 3;
             this.companyPhone_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // label4
+            // phone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Téléphone";
+            this.phone.AutoSize = true;
+            this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone.Location = new System.Drawing.Point(65, 154);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(84, 20);
+            this.phone.TabIndex = 45;
+            this.phone.Text = "Téléphone";
             // 
-            // companyActivity_TB
+            // activity_TB
             // 
-            this.companyActivity_TB.Enabled = false;
-            this.companyActivity_TB.Location = new System.Drawing.Point(243, 234);
-            this.companyActivity_TB.Name = "companyActivity_TB";
-            this.companyActivity_TB.Size = new System.Drawing.Size(260, 20);
-            this.companyActivity_TB.TabIndex = 5;
-            this.companyActivity_TB.Leave += new System.EventHandler(this.outControl);
+            this.activity_TB.Enabled = false;
+            this.activity_TB.Location = new System.Drawing.Point(243, 234);
+            this.activity_TB.Name = "activity_TB";
+            this.activity_TB.Size = new System.Drawing.Size(260, 20);
+            this.activity_TB.TabIndex = 5;
+            this.activity_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // label6
+            // activity_LB
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 234);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Activité ";
+            this.activity_LB.AutoSize = true;
+            this.activity_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activity_LB.Location = new System.Drawing.Point(65, 234);
+            this.activity_LB.Name = "activity_LB";
+            this.activity_LB.Size = new System.Drawing.Size(64, 20);
+            this.activity_LB.TabIndex = 49;
+            this.activity_LB.Text = "Activité ";
             // 
-            // label11
+            // taxe_LB
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(65, 274);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 20);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "Taxe d\'apprentisage";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(558, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 20);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Elève en stage";
+            this.taxe_LB.AutoSize = true;
+            this.taxe_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxe_LB.Location = new System.Drawing.Point(65, 274);
+            this.taxe_LB.Name = "taxe_LB";
+            this.taxe_LB.Size = new System.Drawing.Size(152, 20);
+            this.taxe_LB.TabIndex = 52;
+            this.taxe_LB.Text = "Taxe d\'apprentisage";
             // 
             // fax_TB
             // 
             this.fax_TB.Enabled = false;
-            this.fax_TB.Location = new System.Drawing.Point(736, 114);
+            this.fax_TB.Location = new System.Drawing.Point(736, 74);
             this.fax_TB.Name = "fax_TB";
             this.fax_TB.Size = new System.Drawing.Size(303, 20);
             this.fax_TB.TabIndex = 8;
             // 
-            // label14
+            // fax_LB
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(558, 114);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 20);
-            this.label14.TabIndex = 56;
-            this.label14.Text = "FAX";
+            this.fax_LB.AutoSize = true;
+            this.fax_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fax_LB.Location = new System.Drawing.Point(558, 74);
+            this.fax_LB.Name = "fax_LB";
+            this.fax_LB.Size = new System.Drawing.Size(41, 20);
+            this.fax_LB.TabIndex = 56;
+            this.fax_LB.Text = "FAX";
             // 
             // taxe_CB
             // 
@@ -247,21 +240,22 @@
             this.taxe_CB.Name = "taxe_CB";
             this.taxe_CB.Size = new System.Drawing.Size(260, 21);
             this.taxe_CB.TabIndex = 6;
+            this.taxe_CB.SelectedIndexChanged += new System.EventHandler(this.taxe_CB_SelectedIndexChanged);
             // 
-            // montantLB
+            // currentTA_LB
             // 
-            this.montantLB.AutoSize = true;
-            this.montantLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montantLB.Location = new System.Drawing.Point(558, 194);
-            this.montantLB.Name = "montantLB";
-            this.montantLB.Size = new System.Drawing.Size(115, 20);
-            this.montantLB.TabIndex = 61;
-            this.montantLB.Text = "Montant actuel";
+            this.currentTA_LB.AutoSize = true;
+            this.currentTA_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentTA_LB.Location = new System.Drawing.Point(558, 154);
+            this.currentTA_LB.Name = "currentTA_LB";
+            this.currentTA_LB.Size = new System.Drawing.Size(115, 20);
+            this.currentTA_LB.TabIndex = 61;
+            this.currentTA_LB.Text = "Montant actuel";
             // 
             // currentTA_TB
             // 
             this.currentTA_TB.Enabled = false;
-            this.currentTA_TB.Location = new System.Drawing.Point(736, 194);
+            this.currentTA_TB.Location = new System.Drawing.Point(736, 154);
             this.currentTA_TB.Name = "currentTA_TB";
             this.currentTA_TB.Size = new System.Drawing.Size(303, 20);
             this.currentTA_TB.TabIndex = 9;
@@ -270,68 +264,59 @@
             // currentYear_TB
             // 
             this.currentYear_TB.Enabled = false;
-            this.currentYear_TB.Location = new System.Drawing.Point(736, 154);
+            this.currentYear_TB.Location = new System.Drawing.Point(736, 114);
             this.currentYear_TB.Name = "currentYear_TB";
             this.currentYear_TB.Size = new System.Drawing.Size(303, 20);
             this.currentYear_TB.TabIndex = 10;
             this.currentYear_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // anneeLB
+            // currentYear_LB
             // 
-            this.anneeLB.AutoSize = true;
-            this.anneeLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anneeLB.Location = new System.Drawing.Point(558, 154);
-            this.anneeLB.Name = "anneeLB";
-            this.anneeLB.Size = new System.Drawing.Size(112, 20);
-            this.anneeLB.TabIndex = 63;
-            this.anneeLB.Text = "Anée en cours";
-            // 
-            // training_CB
-            // 
-            this.training_CB.Enabled = false;
-            this.training_CB.FormattingEnabled = true;
-            this.training_CB.Location = new System.Drawing.Point(736, 74);
-            this.training_CB.Name = "training_CB";
-            this.training_CB.Size = new System.Drawing.Size(303, 21);
-            this.training_CB.TabIndex = 7;
+            this.currentYear_LB.AutoSize = true;
+            this.currentYear_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentYear_LB.Location = new System.Drawing.Point(558, 114);
+            this.currentYear_LB.Name = "currentYear_LB";
+            this.currentYear_LB.Size = new System.Drawing.Size(112, 20);
+            this.currentYear_LB.TabIndex = 63;
+            this.currentYear_LB.Text = "Anée en cours";
             // 
             // previousYear_TB
             // 
             this.previousYear_TB.Enabled = false;
-            this.previousYear_TB.Location = new System.Drawing.Point(736, 234);
+            this.previousYear_TB.Location = new System.Drawing.Point(736, 194);
             this.previousYear_TB.Name = "previousYear_TB";
             this.previousYear_TB.Size = new System.Drawing.Size(303, 20);
             this.previousYear_TB.TabIndex = 13;
             this.previousYear_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // annee_prevLB
+            // previousYear_LB
             // 
-            this.annee_prevLB.AutoSize = true;
-            this.annee_prevLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.annee_prevLB.Location = new System.Drawing.Point(558, 234);
-            this.annee_prevLB.Name = "annee_prevLB";
-            this.annee_prevLB.Size = new System.Drawing.Size(132, 20);
-            this.annee_prevLB.TabIndex = 70;
-            this.annee_prevLB.Text = "Anée precedente";
+            this.previousYear_LB.AutoSize = true;
+            this.previousYear_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousYear_LB.Location = new System.Drawing.Point(558, 194);
+            this.previousYear_LB.Name = "previousYear_LB";
+            this.previousYear_LB.Size = new System.Drawing.Size(132, 20);
+            this.previousYear_LB.TabIndex = 70;
+            this.previousYear_LB.Text = "Anée precedente";
             // 
             // previousTA_TB
             // 
             this.previousTA_TB.Enabled = false;
-            this.previousTA_TB.Location = new System.Drawing.Point(736, 274);
+            this.previousTA_TB.Location = new System.Drawing.Point(736, 234);
             this.previousTA_TB.Name = "previousTA_TB";
             this.previousTA_TB.Size = new System.Drawing.Size(303, 20);
             this.previousTA_TB.TabIndex = 11;
             this.previousTA_TB.Leave += new System.EventHandler(this.outControl);
             // 
-            // montant_prevLB
+            // previousTA_LB
             // 
-            this.montant_prevLB.AutoSize = true;
-            this.montant_prevLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montant_prevLB.Location = new System.Drawing.Point(558, 274);
-            this.montant_prevLB.Name = "montant_prevLB";
-            this.montant_prevLB.Size = new System.Drawing.Size(144, 20);
-            this.montant_prevLB.TabIndex = 69;
-            this.montant_prevLB.Text = "Montant precedent";
+            this.previousTA_LB.AutoSize = true;
+            this.previousTA_LB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousTA_LB.Location = new System.Drawing.Point(558, 234);
+            this.previousTA_LB.Name = "previousTA_LB";
+            this.previousTA_LB.Size = new System.Drawing.Size(144, 20);
+            this.previousTA_LB.TabIndex = 69;
+            this.previousTA_LB.Text = "Montant precedent";
             // 
             // modify
             // 
@@ -413,6 +398,7 @@
             this.contactDGV.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.contactDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.contact_lastname,
+            this.contact_ID,
             this.contact_firstname,
             this.direct_phone,
             this.email,
@@ -432,6 +418,14 @@
             this.contact_lastname.HeaderText = "Nom";
             this.contact_lastname.Name = "contact_lastname";
             this.contact_lastname.ReadOnly = true;
+            // 
+            // contact_ID
+            // 
+            this.contact_ID.DataPropertyName = "contact_id";
+            this.contact_ID.HeaderText = "ID";
+            this.contact_ID.Name = "contact_ID";
+            this.contact_ID.ReadOnly = true;
+            this.contact_ID.Visible = false;
             // 
             // contact_firstname
             // 
@@ -508,6 +502,7 @@
             this.studentsTrainingDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.studentsTrainingDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.student_lastname,
+            this.student_id,
             this.student_firstname,
             this.job_year,
             this.course_name,
@@ -527,6 +522,14 @@
             this.student_lastname.HeaderText = "Nom élève";
             this.student_lastname.Name = "student_lastname";
             this.student_lastname.ReadOnly = true;
+            // 
+            // student_id
+            // 
+            this.student_id.DataPropertyName = "student_id";
+            this.student_id.HeaderText = "ID";
+            this.student_id.Name = "student_id";
+            this.student_id.ReadOnly = true;
+            this.student_id.Visible = false;
             // 
             // student_firstname
             // 
@@ -611,11 +614,12 @@
             this.postItDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.postItDGV.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.postItDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.post_it_id,
+            this.to_name,
+            this.from_name,
+            this.date,
+            this.subject,
+            this.notes});
             this.postItDGV.Location = new System.Drawing.Point(0, 0);
             this.postItDGV.MultiSelect = false;
             this.postItDGV.Name = "postItDGV";
@@ -623,51 +627,60 @@
             this.postItDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.postItDGV.Size = new System.Drawing.Size(966, 156);
             this.postItDGV.TabIndex = 78;
+            this.postItDGV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getPostIt);
             // 
-            // dataGridViewTextBoxColumn1
+            // post_it_id
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "to_name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "A";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.post_it_id.DataPropertyName = "post_it_id";
+            this.post_it_id.HeaderText = "ID";
+            this.post_it_id.Name = "post_it_id";
+            this.post_it_id.ReadOnly = true;
+            this.post_it_id.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
+            // to_name
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "from_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "De";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.to_name.DataPropertyName = "to_name";
+            this.to_name.HeaderText = "A";
+            this.to_name.Name = "to_name";
+            this.to_name.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // from_name
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "post_it_date";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.from_name.DataPropertyName = "from_name";
+            this.from_name.HeaderText = "De";
+            this.from_name.Name = "from_name";
+            this.from_name.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // date
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "subject";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Objet";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.date.DataPropertyName = "post_it_date";
+            this.date.HeaderText = "Date";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // subject
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "notes";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Notes";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.subject.DataPropertyName = "subject";
+            this.subject.HeaderText = "Objet";
+            this.subject.Name = "subject";
+            this.subject.ReadOnly = true;
             // 
-            // button2
+            // notes
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(69, 622);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(974, 31);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "Effacer le formulaire";
-            this.button2.UseVisualStyleBackColor = true;
+            this.notes.DataPropertyName = "notes";
+            this.notes.HeaderText = "Notes";
+            this.notes.Name = "notes";
+            this.notes.ReadOnly = true;
+            // 
+            // clearForm
+            // 
+            this.clearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearForm.Location = new System.Drawing.Point(69, 622);
+            this.clearForm.Name = "clearForm";
+            this.clearForm.Size = new System.Drawing.Size(974, 31);
+            this.clearForm.TabIndex = 85;
+            this.clearForm.Text = "Effacer le formulaire";
+            this.clearForm.UseVisualStyleBackColor = true;
             // 
             // modifyCompany
             // 
@@ -692,36 +705,48 @@
             this.confirm.Visible = false;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
+            // deleteCompany
+            // 
+            this.deleteCompany.BackColor = System.Drawing.Color.Brown;
+            this.deleteCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteCompany.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteCompany.Location = new System.Drawing.Point(69, 661);
+            this.deleteCompany.Name = "deleteCompany";
+            this.deleteCompany.Size = new System.Drawing.Size(974, 31);
+            this.deleteCompany.TabIndex = 88;
+            this.deleteCompany.Text = "Suprimer entreprise";
+            this.deleteCompany.UseVisualStyleBackColor = false;
+            this.deleteCompany.Click += new System.EventHandler(this.deleteCompany_Click);
+            // 
             // companyFoundForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1112, 677);
+            this.ClientSize = new System.Drawing.Size(1112, 716);
+            this.Controls.Add(this.deleteCompany);
             this.Controls.Add(this.confirm);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.clearForm);
             this.Controls.Add(this.modifyCompany);
             this.Controls.Add(this.data_TAB);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.modify);
             this.Controls.Add(this.previousYear_TB);
-            this.Controls.Add(this.annee_prevLB);
+            this.Controls.Add(this.previousYear_LB);
             this.Controls.Add(this.previousTA_TB);
-            this.Controls.Add(this.montant_prevLB);
-            this.Controls.Add(this.training_CB);
+            this.Controls.Add(this.previousTA_LB);
             this.Controls.Add(this.currentYear_TB);
-            this.Controls.Add(this.anneeLB);
+            this.Controls.Add(this.currentYear_LB);
             this.Controls.Add(this.currentTA_TB);
-            this.Controls.Add(this.montantLB);
+            this.Controls.Add(this.currentTA_LB);
             this.Controls.Add(this.taxe_CB);
             this.Controls.Add(this.fax_TB);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.companyActivity_TB);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.companyEmail_TB);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.fax_LB);
+            this.Controls.Add(this.taxe_LB);
+            this.Controls.Add(this.activity_TB);
+            this.Controls.Add(this.activity_LB);
+            this.Controls.Add(this.email_TB);
+            this.Controls.Add(this.email_LB);
             this.Controls.Add(this.companyPhone_TB);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.phone);
             this.Controls.Add(this.companyAddress_TB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.companyName_TB);
@@ -729,6 +754,7 @@
             this.Controls.Add(this.label1);
             this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "companyFoundForm";
@@ -757,47 +783,34 @@
         private System.Windows.Forms.TextBox companyName_TB;
         private System.Windows.Forms.TextBox companyAddress_TB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox companyEmail_TB;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox email_TB;
+        private System.Windows.Forms.Label email_LB;
         private System.Windows.Forms.TextBox companyPhone_TB;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox companyActivity_TB;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label phone;
+        private System.Windows.Forms.TextBox activity_TB;
+        private System.Windows.Forms.Label activity_LB;
+        private System.Windows.Forms.Label taxe_LB;
         private System.Windows.Forms.TextBox fax_TB;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label fax_LB;
         private System.Windows.Forms.ComboBox taxe_CB;
-        private System.Windows.Forms.Label montantLB;
+        private System.Windows.Forms.Label currentTA_LB;
         private System.Windows.Forms.TextBox currentTA_TB;
         private System.Windows.Forms.TextBox currentYear_TB;
-        private System.Windows.Forms.Label anneeLB;
-        private System.Windows.Forms.ComboBox training_CB;
+        private System.Windows.Forms.Label currentYear_LB;
         private System.Windows.Forms.TextBox previousYear_TB;
-        private System.Windows.Forms.Label annee_prevLB;
+        private System.Windows.Forms.Label previousYear_LB;
         private System.Windows.Forms.TextBox previousTA_TB;
-        private System.Windows.Forms.Label montant_prevLB;
+        private System.Windows.Forms.Label previousTA_LB;
         private System.Windows.Forms.Button modify;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.TabControl data_TAB;
         private System.Windows.Forms.TabPage contacts;
         private System.Windows.Forms.Button addContact;
         private System.Windows.Forms.DataGridView contactDGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact_lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contact_firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direct_phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn post;
         private System.Windows.Forms.TabPage trainingStudents;
         private System.Windows.Forms.DataGridView studentsTrainingDGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn student_lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn student_firstname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn job_year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn course_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_lastname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
         private System.Windows.Forms.Button addStudentTraining;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button clearForm;
         private System.Windows.Forms.Button modifyCompany;
         private System.Windows.Forms.TabPage postIt;
         private System.Windows.Forms.Button addPostIt;
@@ -805,11 +818,26 @@
         private System.Windows.Forms.Label contactsResult;
         private System.Windows.Forms.Label studentsResult;
         private System.Windows.Forms.Label postItResult;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direct_phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn post;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn student_firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn job_year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn course_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_lastname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teacher_firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn post_it_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn to_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn from_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notes;
+        private System.Windows.Forms.Button deleteCompany;
     }
 }

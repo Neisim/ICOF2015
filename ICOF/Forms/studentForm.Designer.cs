@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(studentForm));
             this.clear = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lastName_TB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.firstName_TB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lastName_TB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.title_LB = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.modifyStudent = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
+            this.deleteStudent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clear
@@ -90,13 +92,13 @@
             this.label3.TabIndex = 76;
             this.label3.Text = "Année stage";
             // 
-            // lastName_TB
+            // firstName_TB
             // 
-            this.lastName_TB.Location = new System.Drawing.Point(331, 116);
-            this.lastName_TB.Name = "lastName_TB";
-            this.lastName_TB.Size = new System.Drawing.Size(260, 20);
-            this.lastName_TB.TabIndex = 2;
-            this.lastName_TB.Leave += new System.EventHandler(this.outControl);
+            this.firstName_TB.Location = new System.Drawing.Point(331, 116);
+            this.firstName_TB.Name = "firstName_TB";
+            this.firstName_TB.Size = new System.Drawing.Size(260, 20);
+            this.firstName_TB.TabIndex = 2;
+            this.firstName_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label2
             // 
@@ -108,13 +110,13 @@
             this.label2.TabIndex = 74;
             this.label2.Text = "Prénom";
             // 
-            // firstName_TB
+            // lastName_TB
             // 
-            this.firstName_TB.Location = new System.Drawing.Point(331, 76);
-            this.firstName_TB.Name = "firstName_TB";
-            this.firstName_TB.Size = new System.Drawing.Size(260, 20);
-            this.firstName_TB.TabIndex = 1;
-            this.firstName_TB.Leave += new System.EventHandler(this.outControl);
+            this.lastName_TB.Location = new System.Drawing.Point(331, 76);
+            this.lastName_TB.Name = "lastName_TB";
+            this.lastName_TB.Size = new System.Drawing.Size(260, 20);
+            this.lastName_TB.TabIndex = 1;
+            this.lastName_TB.Leave += new System.EventHandler(this.outControl);
             // 
             // label5
             // 
@@ -222,11 +224,25 @@
             this.confirm.Visible = false;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
+            // deleteStudent
+            // 
+            this.deleteStudent.BackColor = System.Drawing.Color.Brown;
+            this.deleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteStudent.Location = new System.Drawing.Point(68, 429);
+            this.deleteStudent.Name = "deleteStudent";
+            this.deleteStudent.Size = new System.Drawing.Size(523, 31);
+            this.deleteStudent.TabIndex = 107;
+            this.deleteStudent.Text = "Suprimer élève en stage";
+            this.deleteStudent.UseVisualStyleBackColor = false;
+            this.deleteStudent.Click += new System.EventHandler(this.deleteStudent_Click);
+            // 
             // studentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 445);
+            this.ClientSize = new System.Drawing.Size(662, 485);
+            this.Controls.Add(this.deleteStudent);
             this.Controls.Add(this.confirm);
             this.Controls.Add(this.modifyStudent);
             this.Controls.Add(this.teacherFirstname_TB);
@@ -240,12 +256,13 @@
             this.Controls.Add(this.add);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lastName_TB);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.firstName_TB);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lastName_TB);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "studentForm";
@@ -262,9 +279,9 @@
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox lastName_TB;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox firstName_TB;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox lastName_TB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label title_LB;
@@ -276,5 +293,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button modifyStudent;
         private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Button deleteStudent;
     }
 }

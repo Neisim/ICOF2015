@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,13 @@ namespace ICOF
         private Insert insert;
         private Select select;
         private Update update;
+        private Delete delete;
 
         public Controller() {
             insert = new Insert();
             select = new Select();
             update = new Update();
+            delete = new Delete();
         }
         
         //INSERT
@@ -29,7 +32,7 @@ namespace ICOF
         public String insertTrainingStudent(TrainingStudent training_student)   { return insert.insertTrainingStudent(training_student); }
         
         //SELECT
-        public String    getUserProfile(User u)                     { return select.selectUserProfile(u); }
+        public String getUserProfile(User u)                        { return "Secretariat";/*select.selectUserProfile(u);*/ }
         public DataTable getContacts(Company company)               { return select.selectContactCompany(company); }
         public DataTable getTrainingStudents(Company company)       { return select.selectTrainigStudent(company); }
         public DataTable getPostIt(Company company)                 { return select.selectPostIt(company); }
@@ -39,6 +42,18 @@ namespace ICOF
         public ArrayList getPosts()                                 { return select.selectICOFPost(); }
 
         //UPDATE
-        public String userHash(User u) { return update.updateHash(u); }
+        public String userHash(User u)                              { return update.updateHash(u); }
+        public String updateCompany(Company company)                { return update.updateCompany(company); }
+        public String updateStudent(TrainingStudent student)        { return update.updateStudent(student); }
+        public String updatePostIt(PostIt postIt)                   { return update.updatePostIt(postIt); }
+        public String updatePerson(Person person)                   { return update.updatePerson(person); }
+        public String updateContact(ContactCompany contact)         { return update.updateContact(contact); }
+
+        //DELETE
+        public String deleteCompany(Company company)            { return delete.deleteCompany(company); }
+        public String deleteStudent(TrainingStudent student)    { return delete.deleteStudent(student); }
+        public String deletePostIt(PostIt postIt)               { return delete.deletePostIt(postIt); }
+        public String deleteContact(ContactCompany contact)     { return delete.deleteContact(contact); }
+        public String deletePerson(Person person)               { return delete.deletePerson(person); }
     }
 }

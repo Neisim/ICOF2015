@@ -11,7 +11,7 @@ namespace ICOF
     public class DataBase
     {
         private static String connectionStr = "Server=localhost;Database=icof;Uid=root;Pwd=;";
-        //private static String connectionStr = "Server=mysql55-4.pro;Database=icofcampanc;Uid=icofcampanc;Pwd=Nassim69;";
+        //private static String connectionStr = "Server=192.168.50.150;Database=icof;Uid=ICOF;Pwd=Liogier43;";
         private MySqlConnection connection;
 
         public DataBase()

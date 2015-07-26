@@ -63,7 +63,8 @@ namespace ICOF.ADO
             MySqlCommand sqlCommand = null;
             MySqlDataAdapter adapter = null;
             DataTable companies = new DataTable();
-            String sqlQuery = "SELECT company_name, address, phone, email, fax, activity, payed_TA, current_year, current_TA, previous_year, previous_TA FROM company;";
+            //String sqlQuery = "SELECT company_name, address, phone, email, fax, activity, payed_TA, current_year, current_TA, previous_year, previous_TA FROM company;";
+            String sqlQuery = "SELECT * FROM company;";
             sqlCommand = new MySqlCommand(sqlQuery, connection);
             adapter = new MySqlDataAdapter(sqlCommand);
             adapter.Fill(companies);
@@ -82,6 +83,7 @@ namespace ICOF.ADO
             MySqlCommand sqlCommand = null;
             MySqlDataAdapter adapter = null;
             DataTable persons = new DataTable();
+            //String sqlQuery = "SELECT mrmm, person_firstname, person_lastname, phone, email, icof_post, company_name, company_post, birth_date, course_done, year_in, year_out, diploma FROM person;";
             String sqlQuery = "SELECT * FROM person;";
             sqlCommand = new MySqlCommand(sqlQuery, connection);
             adapter = new MySqlDataAdapter(sqlCommand);
@@ -201,10 +203,10 @@ namespace ICOF.ADO
             MySqlCommand sqlCommand = null;
             try
             {
-                connection = new MySqlConnection();
-                connection.ConnectionString = connectionStr;
-                connection.Open();
-                sqlCommand = new MySqlCommand(sqlQuery, connection);
+                _connection = new MySqlConnection();
+                _connection.ConnectionString = connectionStr;
+                _connection.Open();
+                sqlCommand = new MySqlCommand(sqlQuery, _connection);
                 if (sqlCommand.ExecuteNonQuery() == 1) queryResult = "OK";
             }
             catch (Exception e)
@@ -213,7 +215,7 @@ namespace ICOF.ADO
             }
             finally
             {
-                connection.Close();
+                _connection.Close();
             }
             return queryResult;
         }*/

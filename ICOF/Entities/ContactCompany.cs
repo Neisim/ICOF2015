@@ -8,6 +8,7 @@ namespace ICOF.Entities
 {
     public class ContactCompany
     {
+        private int     _ID;
         private String  _companyName;
         private String  _contactFirstName;
         private String  _contactLastName;
@@ -17,7 +18,8 @@ namespace ICOF.Entities
 
         public ContactCompany() { }
 
-        public ContactCompany(String companyName, String contactFirstName, String contactLastName, String phone, String email, String post) {
+        public ContactCompany(int ID, String companyName, String contactFirstName, String contactLastName, String phone, String email, String post) {
+            _ID = ID;
             _companyName = companyName;
             _contactFirstName = contactFirstName;
             _contactLastName = contactLastName;
@@ -27,17 +29,19 @@ namespace ICOF.Entities
         }
 
         //GETTERS
+        public int getID()                      { return _ID; }
         public String getCompanyName()          { return _companyName; }
-        public String getcontactFirstName()     { return _contactFirstName; }
-        public String getcontactLastName()      { return _contactLastName; }
+        public String getFirstName()            { return _contactFirstName; }
+        public String getLastName()             { return _contactLastName; }
         public String getPhone()                { return _phone; }
         public String getEmail()                { return _email; }
         public String getPost()                 { return _post; }
 
         //SETTERS
+        public void setID(int ID)                                   { _ID = ID; }
         public void setCompanyName(String companyName)              { _companyName = companyName; }
-        public void setcontactFirstName(String contactFirstName)    { _contactFirstName = contactFirstName; }
-        public void setcontactLastName(String contactLastName)      { _contactLastName = contactLastName; }
+        public void setFirstName(String contactFirstName)    { _contactFirstName = contactFirstName; }
+        public void setLastName(String contactLastName)      { _contactLastName = contactLastName; }
         public void setPhone(String phone)                          { _phone = phone; }
         public void setEmail(String email)                          { _email = email; }
         public void setPost(String post)                            { _post = post; }

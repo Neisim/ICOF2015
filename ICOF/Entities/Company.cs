@@ -8,6 +8,7 @@ namespace ICOF.Entities
 {
     public class Company
     {
+        private int     _ID;
         private String  _name;
         private String  _address;
         private String  _phone;
@@ -22,7 +23,9 @@ namespace ICOF.Entities
 
         public Company() { }
 
-        public Company(String name, String address, String phone, String email, String FAX, String activity, Boolean taxe, int currentYear, Double currentTA, int previousYear, Double previousTA) {
+        public Company(int ID, String name, String address, String phone, String email, String FAX, String activity, Boolean taxe, int currentYear, Double currentTA, int previousYear, Double previousTA)
+        {
+            _ID = ID;
             _name = name;
             _address = address;
             _phone = phone;
@@ -37,29 +40,31 @@ namespace ICOF.Entities
         }
 
         //GETTERS
-        public String getName()         { return _name; }
-        public String getAddress()      { return _address; }
-        public String getPhone()        { return _phone; }
-        public String getEmail()        { return _email; }
-        public String getFAX()          { return _FAX; }
-        public String getActivity()     { return _activity; }
-        public Boolean  getTaxe()           { return _taxe; }
-        public int      getCurrentYear()    { return _currentYear; }
-        public Double   getCurrentTA()      { return _currentTA; }
-        public int      getPreviousYear()   { return _previousYear; }
-        public Double   getPreviousTA()     { return _previousTA; }
+        public int getID()                      { return _ID; }
+        public String getName()                 { return _name; }
+        public String getAddress()              { return _address; }
+        public String getPhone()                { return _phone; }
+        public String getEmail()                { return _email; }
+        public String getFAX()                  { return _FAX; }
+        public String getActivity()             { return _activity; }
+        public Boolean getTaxe()                { return _taxe; }
+        public Double  getCurrentTA()           { return _currentTA; }
+        public Double  getPreviousTA()          { return _previousTA; }
+        public int getCurrentYear()             { return _currentYear; }
+        public int getPreviousYear()            { return _previousYear; }
 
         //SETTERS
-        public void setName(String name)                { _name = name; }
-        public void setAddress(String address)          { _address = address; }
-        public void setPhone(String phone)              { _phone = phone; }
-        public void setEmail(String email)              { _email = email; }
-        public void setFAX(String FAX)                  { _FAX = FAX; }
-        public void setActivity(String activity)        { _activity = activity; }
-        public void setTaxe(Boolean taxe)               { _taxe = taxe; }
-        public void setCurrentYear(int currentYear)     { _currentYear = currentYear; }
-        public void setCurrentTA(Double currentTA)      { _currentTA = currentTA; }
-        public void setPreviousYear(int previousYear)   { _previousYear = previousYear; }
-        public void setPreviousTA(Double previousTA)    { _currentTA = previousTA; }
+        public void setID(int ID)                           { _ID = ID; }
+        public void setName(String name)                    { _name = name; }
+        public void setAddress(String address)              { _address = address; }
+        public void setPhone(String phone)                  { _phone = phone; }
+        public void setEmail(String email)                  { _email = email; }
+        public void setFAX(String FAX)                      { _FAX = FAX; }
+        public void setActivity(String activity)            { _activity = activity; }
+        public void setTaxe(Boolean taxe)                   { _taxe = taxe; }
+        public void setCurrentYear(int currentYear)         { _currentYear = currentYear; }
+        public void setCurrentTA(Double currentTA)          { _currentTA = currentTA; }
+        public void setPreviousYear(int previousYear)       { _previousYear = previousYear; }
+        public void setPreviousTA(Double previousTA)        { _currentTA = previousTA; }
     }
 }
